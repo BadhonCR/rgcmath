@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academic Resources | Department of Mathematics</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+        }
+
+        body{
+            background:#f4f7fb;
+            color:#333;
+        }
+
+        .hero{
+            background:linear-gradient(135deg,#003366,#0056b3);
+            color:#fff;
+            text-align:center;
+            padding:70px 20px;
+        }
+
+        .hero h1{
+            font-size:40px;
+            margin-bottom:10px;
+        }
+
+        .hero p{
+            font-size:18px;
+            opacity:.95;
+        }
+
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+            padding:40px 0;
+        }
+
+        .section-title{
+            color:#003366;
+            border-left:6px solid #0056b3;
+            padding-left:12px;
+            margin-bottom:25px;
+            font-size:28px;
+        }
+
+        .resource-card{
+            background:#fff;
+            border-radius:12px;
+            padding:20px;
+            margin-bottom:40px;
+            box-shadow:0 5px 15px rgba(0,0,0,.08);
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        table th{
+            background:#003366;
+            color:#fff;
+            padding:12px;
+        }
+
+        table td{
+            padding:12px;
+            border-bottom:1px solid #ddd;
+        }
+
+        table tr:hover{
+            background:#f2f7ff;
+        }
+
+        .btn{
+            display:inline-block;
+            background:#0056b3;
+            color:#fff;
+            padding:8px 16px;
+            border-radius:5px;
+            text-decoration:none;
+            transition:.3s;
+            font-size:14px;
+        }
+
+        .btn:hover{
+            background:#003366;
+        }
+
+        .year-title{
+            font-size:24px;
+            color:#0056b3;
+            margin:30px 0 15px;
+        }
+
+        .links{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .link-box{
+            background:#fff;
+            border-radius:10px;
+            padding:20px;
+            text-align:center;
+            box-shadow:0 4px 10px rgba(0,0,0,.08);
+        }
+
+        .link-box i{
+            font-size:40px;
+            color:#0056b3;
+            margin-bottom:15px;
+        }
+
+        .link-box h3{
+            margin-bottom:10px;
+            color:#003366;
+        }
+
+        footer{
+            background:#003366;
+            color:#fff;
+            text-align:center;
+            padding:20px;
+            margin-top:50px;
+        }
+
+        @media(max-width:768px){
+
+            table{
+                display:block;
+                overflow-x:auto;
+            }
+
+            .hero h1{
+                font-size:30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<h1>Academic Resources</h1>
+
+<p>Syllabus, PDF Books, Previous Questions & Online Learning Resources</p>
+
+</section>
+
+<div class="container">
+
+<h2 class="section-title">Syllabus</h2>
+
+<div class="resource-card">
+
+<a href="https://www.nu.ac.bd/syllabus-honours.php" target="_blank" class="btn">
+
+<i class="fas fa-book-open"></i> Open Syllabus
+
+</a>
+
+</div>
+
+<h2 class="section-title">PDF Books (Major Only)</h2>
+
+<div class="resource-card">
+
+<h3 class="year-title">1st Year</h3>
+
+<table>
+
+<tr>
+
+<th>Subject Code</th>
+
+<th>Subject Title</th>
+
+<th>Link</th>
+
+</tr>
+
+<tr>
+
+<td>213701</td>
+
+<td>Fundamentals of Mathematics</td>
+
+<td><a class="btn" target="_blank"
+href="https://drive.google.com/drive/u/0/folders/1iKtl4wfpw-13BE1Sq5r-UfCsmpk-5w9F">Open</a></td>
+
+</tr>
+
+<tr>
+
+<td>213703</td>
+
+<td>Fundamentals of Calculus</td>
+
+<td><a class="btn" href="#">Coming Soon</a></td>
+
+</tr>
+
+<tr>
+
+<td>213705</td>
+
+<td>Linear Algebra and Analytic Geometry</td>
+
+<td><a class="btn" href="#">Coming Soon</a></td>
+
+</tr>
+
+</table>
+
+<h3 class="year-title">2nd Year</h3>
+
+<table>
+
+<tr>
+
+<th>Subject Code</th>
+
+<th>Subject Title</th>
+
+<th>Link</th>
+
+</tr>
+
+<tr>
+
+<td>223701</td>
+
+<td>Calculus-II</td>
+
+<td><a class="btn" href="#">Coming Soon</a></td>
+
+</tr>
+
+<tr>
+
+<td>223703</td>
+
+<td>Ordinary Differential Equations</td>
+
+<td><a class="btn" href="#">Coming Soon</a></td>
+
+</tr>
+
+<tr>
+
+<td>223705</td>
+
+<td>Computer Programming (Fortran)</td>
+
+<td><a class="btn" href="#">Coming Soon</a></td>
+
+</tr>
+
+</table>
+
+<h3 class="year-title">3rd Year</h3>
+
+<table>
+
+<tr>
+
+<th>Subject Code</th>
+
+<th>Subject Title</th>
+
+<th>Link</th>
+
+</tr>
+
+<tr>
+
+<td>233701</td>
+
+<td>Abstract Algebra</td>
+
+<td><a class="btn" href="#">Coming Soon</a></td>
+
+</tr>
+
+<tr>
+
+<td>233703</td>
+
+<td>Real Analysis</td>
+
+<td><a class="btn" href="#">Coming Soon</a></td>
+
+</tr>
+
+<tr>
+
+<td>233705</td>
+
+<td>Numerical Analysis</td>
+
+<td><a class="btn" href="#">Coming Soon</a></td>
+
+</tr>
+
+<tr>
+
+<td>233707</td>
+
+<td>Complex Analysis</td>
+
+<td><a class="btn" href="#">Coming Soon</a></td>
+
+</tr>
+
+<tr>
+
+<td>233709</td>
+
+<td>Differential Geometry</td>
+
+<td>
+
+<a class="btn"
+
+target="_blank"
+
+href="https://drive.google.com/file/d/1mnTogQpF0PtVJnLbx-P07yvPoROTMiDK/view?usp=drive_link">
+
+Open
+
+</a>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>233711</td>
+
+<td>Mechanics</td>
+
+<td><a class="btn" href="#">Coming Soon</a></td>
+
+</tr>
+
+<tr>
+
+<td>233713</td>
+
+<td>Linear Programming</td>
+
+<td><a class="btn" href="#">Coming Soon</a></td>
+
+</tr>
+
+</table>
+
+<h3 class="year-title">4th Year</h3>
+
+<table>
+
+<tr>
+
+<th>Subject Code</th>
+
+<th>Subject Title</th>
+
+<th>Link</th>
+
+</tr>
+
+<tr><td>243701</td><td>Theory of Numbers</td><td><a class="btn" href="#">Coming Soon</a></td></tr>
+
+<tr><td>243703</td><td>Topology & Functional Analysis</td><td><a class="btn" href="#">Coming Soon</a></td></tr>
+
+<tr><td>243705</td><td>Methods of Applied Mathematics</td><td><a class="btn" href="#">Coming Soon</a></td></tr>
+
+<tr><td>243707</td><td>Tensor Analysis</td><td><a class="btn" href="#">Coming Soon</a></td></tr>
+
+<tr><td>243709</td><td>Partial Differential Equations</td><td><a class="btn" href="#">Coming Soon</a></td></tr>
+
+<tr><td>243711</td><td>Hydrodynamics</td><td><a class="btn" href="#">Coming Soon</a></td></tr>
+
+<tr><td>243713</td><td>Discrete Mathematics</td><td><a class="btn" href="#">Coming Soon</a></td></tr>
+
+<tr><td>243715</td><td>Astronomy</td><td><a class="btn" href="#">Coming Soon</a></td></tr>
+
+<tr><td>243717</td><td>Mathematical Modeling in Biology</td><td><a class="btn" href="#">Coming Soon</a></td></tr>
+
+</table>
+
+</div>
+
+<h2 class="section-title">Additional Resources</h2>
+
+<div class="links">
+
+<div class="link-box">
+
+<i class="fas fa-file-alt"></i>
+
+<h3>Previous Questions Archive</h3>
+
+<a class="btn"
+
+target="_blank"
+
+href="https://scienceview.info/question-archive.php?subject_slug=mathematics">
+
+Open Archive
+
+</a>
+
+</div>
+
+<div class="link-box">
+
+<i class="fas fa-video"></i>
+
+<h3>Online Lectures</h3>
+
+<a class="btn"
+
+target="_blank"
+
+href="https://onlinelecture.nu.ac.bd/H1_MATHEMATICS.php">
+
+Watch
+
+</a>
+
+</div>
+
+<div class="link-box">
+
+<i class="fas fa-book"></i>
+
+<h3>Free Mathematics Books</h3>
+
+<a class="btn"
+
+target="_blank"
+
+href="https://www.freebookcentre.net/SpecialCat/Free-Mathematics-Books-Download.html">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Department of Mathematics | Rangpur Government College
+
+</footer>
+
+</body>
+
+</html>
