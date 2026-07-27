@@ -3,821 +3,1383 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ==========================================
+                    BASIC META
+    =========================================== -->
 
-<title>About | Department of Mathematics | Rangpur Government College</title>
+    <meta charset="UTF-8">
 
-<meta name="description"
-content="Official About Page of the Department of Mathematics, Rangpur Government College, Rangpur.">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-<meta name="keywords"
-content="Rangpur Government College, Mathematics Department, National University, Bangladesh">
+    <title>
+        About |
+        Department of Mathematics |
+        Rangpur Government College
+    </title>
 
-<meta name="author"
-content="Department of Mathematics">
+    <meta name="description"
+        content="Learn about the Department of Mathematics, Rangpur Government College, its history, mission, vision, academic excellence and institutional heritage.">
 
-<link rel="icon" href="assets/images/logo.png">
+    <meta name="keywords"
+        content="Department of Mathematics,Rangpur Government College,About,RGC,National University,Bangladesh">
 
-<!-- Bootstrap -->
+    <meta name="author"
+        content="Department of Mathematics">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="theme-color"
+        content="#003366">
 
-<!-- Font Awesome -->
+    <!-- Open Graph -->
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta property="og:title"
+        content="About | Department of Mathematics | Rangpur Government College">
 
-<!-- Google Font -->
+    <meta property="og:type"
+        content="website">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta property="og:image"
+        content="assets/icons/RGC Dep of Math logo.png">
 
-<style>
+    <meta property="og:description"
+        content="Official About Page of the Department of Mathematics, Rangpur Government College.">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
+    <!-- Google Fonts -->
 
-body{
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
-font-family:'Poppins',sans-serif;
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-background:#f4f7fb;
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-color:#333;
+    <!-- Bootstrap -->
 
-line-height:1.8;
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
-}
+    <!-- Font Awesome -->
 
-a{
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-text-decoration:none;
+    <!-- AOS Animation -->
 
-}
+    <link rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
-img{
+    <!-- Main CSS -->
 
-max-width:100%;
-
-display:block;
-
-}
-
-/*========== NAVBAR ==========*/
-
-.navbar{
-
-background:#003b78;
-
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-
-padding:12px 0;
-
-}
-
-.navbar-brand{
-
-font-size:22px;
-
-font-weight:700;
-
-color:#fff !important;
-
-}
-
-.nav-link{
-
-color:#fff !important;
-
-font-weight:500;
-
-padding:10px 18px !important;
-
-transition:.3s;
-
-border-radius:6px;
-
-}
-
-.nav-link:hover{
-
-background:#ffffff;
-
-color:#003b78 !important;
-
-}
-
-.nav-link.active{
-
-background:#ffc107;
-
-color:#003b78 !important;
-
-}
-
-/*========== HERO ==========*/
-
-.hero{
-
-height:520px;
-
-background:
-
-linear-gradient(rgba(0,45,90,.70),
-
-rgba(0,45,90,.70)),
-
-url("assets/images/rangpur-government-college-gate-bannar.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-color:#fff;
-
-}
-
-.hero h1{
-
-font-size:52px;
-
-font-weight:700;
-
-margin-bottom:15px;
-
-}
-
-.hero p{
-
-font-size:22px;
-
-letter-spacing:1px;
-
-}
-
-/*========== BREADCRUMB ==========*/
-
-.breadcrumb-area{
-
-background:#fff;
-
-padding:18px 0;
-
-box-shadow:0 3px 10px rgba(0,0,0,.05);
-
-}
-
-.breadcrumb{
-
-margin:0;
-
-}
-
-.breadcrumb-item a{
-
-color:#0056b3;
-
-font-weight:600;
-
-}
-
-/*========== SECTION TITLE ==========*/
-
-.section-title{
-
-text-align:center;
-
-margin-bottom:50px;
-
-}
-
-.section-title h2{
-
-font-size:38px;
-
-font-weight:700;
-
-color:#003b78;
-
-position:relative;
-
-display:inline-block;
-
-padding-bottom:12px;
-
-}
-
-.section-title h2::after{
-
-content:"";
-
-position:absolute;
-
-left:50%;
-
-bottom:0;
-
-transform:translateX(-50%);
-
-width:90px;
-
-height:4px;
-
-background:#ffc107;
-
-border-radius:20px;
-
-}
-
-/*========== ABOUT ==========*/
-
-.about{
-
-padding:80px 0;
-
-}
-
-.about-card{
-
-background:#fff;
-
-padding:45px;
-
-border-radius:15px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-}
-
-.about-card p{
-
-text-align:justify;
-
-font-size:17px;
-
-margin-bottom:20px;
-
-}
-
-/*========== IMAGE ==========*/
-
-.about-image img{
-
-border-radius:15px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-}
-
-/*========== RESPONSIVE ==========*/
-
-@media(max-width:992px){
-
-.hero{
-
-height:420px;
-
-}
-
-.hero h1{
-
-font-size:38px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.navbar-brand{
-
-font-size:18px;
-
-}
-
-.hero{
-
-height:360px;
-
-}
-
-.hero h1{
-
-font-size:30px;
-
-}
-
-.hero p{
-
-font-size:17px;
-
-}
-
-.section-title h2{
-
-font-size:30px;
-
-}
-
-.about-card{
-
-padding:25px;
-
-}
-
-}
-
-</style>
+    <link rel="stylesheet"
+        href="assets/css/style.css">
 
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- =====================================
+                TOP HEADER
+====================================== -->
+
+<div class="top-header">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    rgc.mathematics@gmail.com
+
+                </span>
+
+                <span class="ms-4">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +8801712444826
+
+                </span>
+
+            </div>
+
+            <div class="col-lg-6 text-lg-end">
+
+                <a href="https://rangpur.college.gov.bd/"
+                    target="_blank">
+
+                    Official College Website
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =====================================
+                NAVBAR
+====================================== -->
 
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
 
-<div class="container">
+    <div class="container">
 
-<a class="navbar-brand"
+        <a class="navbar-brand d-flex align-items-center"
+            href="index.html">
 
-href="index.html">
+            <img src="assets/icons/RGC Dep of Math logo.png"
+                width="60"
+                class="me-3"
+                alt="Department Logo">
 
-Department of Mathematics
+            <div>
 
-</a>
+                <h5 class="m-0 fw-bold">
 
-<button
+                    Department of Mathematics
 
-class="navbar-toggler"
+                </h5>
 
-type="button"
+                <small>
 
-data-bs-toggle="collapse"
+                    Rangpur Government College
 
-data-bs-target="#menu">
+                </small>
 
-<span class="navbar-toggler-icon"></span>
+            </div>
 
-</button>
+        </a>
 
-<div class="collapse navbar-collapse"
+        <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar">
 
-id="menu">
+            <span class="navbar-toggler-icon"></span>
 
-<ul class="navbar-nav ms-auto">
+        </button>
 
-<li class="nav-item">
+        <div class="collapse navbar-collapse"
+            id="navbar">
 
-<a class="nav-link"
+            <ul class="navbar-nav ms-auto">
 
-href="index.html">
+                <li class="nav-item">
 
-Home
+                    <a class="nav-link"
+                        href="index.html">
 
-</a>
+                        Home
 
-</li>
+                    </a>
 
-<li class="nav-item">
+                </li>
 
-<a class="nav-link active"
+                <li class="nav-item">
 
-href="about.html">
+                    <a class="nav-link active"
+                        href="about.html">
 
-About
+                        About
 
-</a>
+                    </a>
 
-</li>
+                </li>
 
-<li class="nav-item">
+                <li class="nav-item">
 
-<a class="nav-link"
+                    <a class="nav-link"
+                        href="faculty.html">
 
-href="faculty.html">
+                        Faculty
 
-Faculty
+                    </a>
 
-</a>
+                </li>
 
-</li>
+                <li class="nav-item">
 
-<li class="nav-item">
+                    <a class="nav-link"
+                        href="resources.html">
 
-<a class="nav-link"
+                        Resources
 
-href="resources.html">
+                    </a>
 
-Resources
+                </li>
 
-</a>
+                <li class="nav-item">
 
-</li>
+                    <a class="nav-link"
+                        href="gallery.html">
 
-<li class="nav-item">
+                        Gallery
 
-<a class="nav-link"
+                    </a>
 
-href="contact.html">
+                </li>
 
-Contact
+                <li class="nav-item">
 
-</a>
+                    <a class="nav-link"
+                        href="contact.html">
 
-</li>
+                        Contact
 
-</ul>
+                    </a>
 
-</div>
+                </li>
 
-</div>
+            </ul>
+
+        </div>
+
+    </div>
 
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- =====================================
+            HERO SECTION
+====================================== -->
+<!-- =====================================
+                HERO SECTION
+====================================== -->
 
-<section class="hero">
+<section class="about-hero">
 
-<div class="container">
+    <div class="overlay"></div>
 
-<h1>
+    <div class="container position-relative">
 
-About Rangpur Government College
+        <div class="row justify-content-center">
 
-</h1>
+            <div class="col-lg-9 text-center text-white">
 
-<p>
+                <h1 data-aos="fade-down">
 
-Department of Mathematics
+                    About the Department
 
-</p>
+                </h1>
 
-</div>
+                <p class="lead mt-3"
+                    data-aos="fade-up">
+
+                    Discover the rich history,
+                    academic excellence,
+                    vision and achievements of
+                    the Department of Mathematics,
+                    Rangpur Government College.
+
+                </p>
+
+                <nav aria-label="breadcrumb"
+                    class="mt-4">
+
+                    <ol class="breadcrumb justify-content-center">
+
+                        <li class="breadcrumb-item">
+
+                            <a href="index.html">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+                        <li class="breadcrumb-item active">
+
+                            About
+
+                        </li>
+
+                    </ol>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ================= BREADCRUMB ================= -->
-
-<section class="breadcrumb-area">
-
-<div class="container">
-
-<nav>
-
-<ol class="breadcrumb">
-
-<li class="breadcrumb-item">
-
-<a href="index.html">
-
-Home
-
-</a>
-
-</li>
-
-<li class="breadcrumb-item active">
-
-About
-
-</li>
-
-</ol>
-
-</nav>
-
-</div>
-
-</section>
-
-<!-- ================= ABOUT ================= -->
-
-<section class="about">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-
-About the College
-
-</h2>
-
-</div>
-
-<div class="row align-items-center">
-
-<div class="col-lg-12">
-
-<div class="about-card">
-
-<p>
-
-With the nationalization of Carmichael College on
-01 January 1963, opportunities for higher education
-became limited in Rangpur. To meet the growing
-demand of students, Professor Emaz Uddin and many
-distinguished citizens took the initiative to establish
-another higher educational institution in Rangpur.
-
-</p>
-
-<p>
-
-Their combined efforts and generous donations of
-land and financial support resulted in the establishment
-of Rangpur Government College on
-25 July 1963, which has since become one of the
-leading institutions of higher education in northern
-Bangladesh.
-
-</p>
-<p>
-
-Initially, the college operated as a night college at
-Koilash Ranjan High School and as a day college at
-the historic Zamindarbari (Kalidham) of Ram Babu.
-Professor Emaz Uddin served as the founding Principal,
-while Professor Fulae Hossain became the first
-Vice Principal of the institution.
-
-</p>
-
-<p>
-
-The college was affiliated with the University of
-Rajshahi from its establishment until 1992. At the
-beginning, permission was granted to open only the
-Intermediate Arts (IA) programme. Due to the
-excellent academic performance of the institution,
-Bachelor of Arts (BA) courses were introduced in
-1965, followed by Bachelor of Science (B.Sc.)
-programmes in 1970.
-
-</p>
-
-<p>
-
-The college moved to its permanent campus in 1967.
-A boys' hostel was established at the former
-Kalidham campus to provide accommodation for
-students from different districts of Bangladesh.
-
-</p>
-
-<p>
-
-During the Great Liberation War of 1971, the teachers,
-students and people of Rangpur actively participated
-in the struggle for independence. One of the students
-of the college, Moslem Uddin, embraced martyrdom
-for the country. In honour of his supreme sacrifice,
-the boys' hostel was later renamed
-<strong>Shaheed Moslem Uddin Hall.</strong>
-
-</p>
-
-<p>
-
-Rangpur Government College was officially
-nationalized on <strong>01 November 1984.</strong>
-After nationalization, student enrolment increased
-rapidly, leading to the construction of new academic
-buildings, laboratories, libraries and student hostels.
-In 1993, the college became affiliated with the
-National University of Bangladesh.
-
-</p>
-
-<p>
-
-Today the college offers Higher Secondary,
-Degree (Pass), Honours and Master's programmes
-in various disciplines. Student organizations such as
-BNCC, Rover Scout and Bandhon (Voluntary Blood
-Donors' Association) continue to provide leadership,
-discipline and humanitarian services to the students.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= Mathematics Department ================= -->
-
-<section class="py-5 bg-white">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-
-Department of Mathematics
-
-</h2>
-
-</div>
-
-<div class="row align-items-center">
-<div class="col-lg-5">
-
-<img src="assets/images/new-building-4.jpg"
-class="img-fluid rounded shadow"
-alt="Department of Mathematics">
-
-</div>
-<div class="col-lg-7">
-
-<p class="text-justify">
-
-The Department of Mathematics started its
-undergraduate Honours programme in
-<strong>2011</strong> together with the Departments of
-English, Botany and Zoology.
-
-</p>
-
-<p>
-
-Since its establishment, the department has been
-committed to providing quality education in Mathematics and related
-disciplines under the National University of
-Bangladesh.
-
-</p>
-
-<p>
-
-The department aims to develop analytical thinking,
-problem-solving skills and research interest among
-students through modern teaching methods,
-seminars and academic activities.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= Information ================= -->
+<!-- =====================================
+        ABOUT THE COLLEGE
+====================================== -->
 
 <section class="py-5">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
+        <div class="row align-items-center g-5">
 
-<h2>
+            <!-- Image -->
 
-College Information
+            <div class="col-lg-5"
+                data-aos="fade-right">
 
-</h2>
+                <img src="assets/images/new-building-4.jpg"
+                    class="img-fluid rounded-4 shadow-lg"
+                    alt="Rangpur Government College">
 
-</div>
+            </div>
 
-<div class="row g-4">
+            <!-- Content -->
 
-<div class="col-md-3">
+            <div class="col-lg-7"
+                data-aos="fade-left">
 
-<div class="card text-center shadow h-100">
+                <div class="section-heading">
 
-<div class="card-body">
+                    <span class="sub-title">
 
-<i class="fas fa-phone fa-3x text-primary mb-3"></i>
+                        Established in 1963
 
-<h5>Telephone</h5>
+                    </span>
 
-<p>0521-63110</p>
+                    <h2 class="section-title">
 
-</div>
+                        About Rangpur Government College
 
-</div>
+                    </h2>
 
-</div>
+                </div>
 
-<div class="col-md-3">
+                <p>
 
-<div class="card text-center shadow h-100">
+                    Rangpur Government College is one
+                    of the oldest and most prestigious
+                    higher educational institutions in
+                    northern Bangladesh. Since its
+                    establishment, the college has been
+                    committed to providing quality
+                    education and producing competent
+                    graduates with strong moral values.
 
-<div class="card-body">
+                </p>
 
-<i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                <p>
 
-<h5>Email</h5>
+                    The institution offers Higher
+                    Secondary, Degree (Pass),
+                    Honours and Master's programmes
+                    under the National University of
+                    Bangladesh and serves thousands of
+                    students every year.
 
-<p>
+                </p>
 
-<a href="mailto:rangpurcollege1984@gmail.com">
+                <p>
 
-rangpurcollege1984@gmail.com
+                    Through its experienced teachers,
+                    modern classrooms, library,
+                    laboratories and extracurricular
+                    activities, the college continues
+                    to play a significant role in the
+                    educational development of the
+                    region.
 
-</a>
+                </p>
 
-</p>
+            </div>
 
-</div>
+        </div>
 
-</div>
-
-</div>
-
-<div class="col-md-3">
-
-<div class="card text-center shadow h-100">
-
-<div class="card-body">
-
-<i class="fas fa-globe fa-3x text-primary mb-3"></i>
-
-<h5>Website</h5>
-
-<p>
-
-<a href="https://rangpur.college.gov.bd" target="_blank">
-
-rangpur.college.gov.bd
-
-</a>
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-3">
-
-<div class="card text-center shadow h-100">
-
-<div class="card-body">
-
-<i class="fas fa-building-columns fa-3x text-primary mb-3"></i>
-
-<h5>College Code</h5>
-
-<p>
-
-NU : 3207<br>
-
-DEB : 5300<br>
-
-EIIN : 127484
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
-<!-- ================= College Administration ================= -->
+
+<!-- =====================================
+        COLLEGE HISTORY
+====================================== -->
+    <section class="history-section py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5"
+            data-aos="fade-up">
+
+            <span class="sub-title">
+
+                Our Journey
+
+            </span>
+
+            <h2 class="section-title">
+
+                History of Rangpur Government College
+
+            </h2>
+
+            <p class="text-muted">
+
+                More than six decades of excellence in higher education.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="history-card h-100"
+                    data-aos="fade-right">
+
+                    <div class="history-year">
+
+                        1963
+
+                    </div>
+
+                    <h4>
+
+                        Foundation of the College
+
+                    </h4>
+
+                    <p>
+
+                        Rangpur Government College was
+                        established on
+                        <strong>25 July 1963</strong>
+                        through the dedicated efforts of
+                        Professor Emaz Uddin and many
+                        distinguished citizens of
+                        Rangpur to meet the growing
+                        demand for higher education.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="history-card h-100"
+                    data-aos="fade-left">
+
+                    <div class="history-year">
+
+                        1967
+
+                    </div>
+
+                    <h4>
+
+                        Permanent Campus
+
+                    </h4>
+
+                    <p>
+
+                        The college shifted to its
+                        permanent campus and expanded
+                        academic facilities including
+                        classrooms, laboratories and
+                        residential accommodation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="history-card h-100"
+                    data-aos="fade-right">
+
+                    <div class="history-year">
+
+                        1971
+
+                    </div>
+
+                    <h4>
+
+                        Liberation War
+
+                    </h4>
+
+                    <p>
+
+                        Teachers and students actively
+                        participated in the Liberation
+                        War. Student
+                        <strong>Shaheed Moslem Uddin</strong>
+                        sacrificed his life for the
+                        independence of Bangladesh.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="history-card h-100"
+                    data-aos="fade-left">
+
+                    <div class="history-year">
+
+                        1984
+
+                    </div>
+
+                    <h4>
+
+                        Nationalization
+
+                    </h4>
+
+                    <p>
+
+                        The institution was officially
+                        nationalized on
+                        <strong>01 November 1984</strong>,
+                        opening a new era of academic
+                        expansion and development.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="history-card h-100"
+                    data-aos="fade-right">
+
+                    <div class="history-year">
+
+                        1993
+
+                    </div>
+
+                    <h4>
+
+                        National University
+
+                    </h4>
+
+                    <p>
+
+                        Rangpur Government College
+                        became affiliated with the
+                        National University of
+                        Bangladesh and started offering
+                        Honours and Master's
+                        programmes.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="history-card h-100"
+                    data-aos="fade-left">
+
+                    <div class="history-year">
+
+                        Today
+
+                    </div>
+
+                    <h4>
+
+                        Academic Excellence
+
+                    </h4>
+
+                    <p>
+
+                        Today the college is one of the
+                        leading educational institutions
+                        in northern Bangladesh,
+                        providing quality education,
+                        research opportunities and
+                        leadership development.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+      DEPARTMENT OF MATHEMATICS
+====================================== -->
+    <section class="department-section py-5">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- Department Image -->
+
+            <div class="col-lg-5"
+                data-aos="fade-right">
+
+                <img src="assets/images/math-department.jpg"
+                    class="img-fluid rounded-4 shadow-lg"
+                    alt="Department of Mathematics">
+
+            </div>
+
+            <!-- Department Details -->
+
+            <div class="col-lg-7"
+                data-aos="fade-left">
+
+                <span class="sub-title">
+
+                    Department of Mathematics
+
+                </span>
+
+                <h2 class="section-title">
+
+                    Excellence in Mathematical Education
+
+                </h2>
+
+                <p>
+
+                    The Department of Mathematics of
+                    Rangpur Government College started its
+                    Honours programme in
+                    <strong>2011</strong>.
+                    Since then, the department has become
+                    one of the leading Mathematics
+                    departments under the National
+                    University of Bangladesh.
+
+                </p>
+
+                <p>
+
+                    Our department is committed to
+                    providing quality education through
+                    experienced faculty members,
+                    innovative teaching methods,
+                    seminars, workshops and academic
+                    research.
+
+                </p>
+
+                <p>
+
+                    Students are encouraged to develop
+                    analytical thinking,
+                    logical reasoning,
+                    mathematical modelling,
+                    research skills and
+                    problem-solving abilities for higher
+                    education and professional careers.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+        DEPARTMENT OBJECTIVES
+====================================== -->
 
 <section class="py-5 bg-light">
 
     <div class="container">
 
-        <div class="section-title">
-            <h2>College Administration</h2>
+        <div class="text-center mb-5"
+            data-aos="fade-up">
+
+            <span class="sub-title">
+
+                Our Commitment
+
+            </span>
+
+            <h2 class="section-title">
+
+                Mission, Vision & Objectives
+
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Mission -->
+
+            <div class="col-lg-4">
+
+                <div class="feature-card h-100"
+                    data-aos="zoom-in">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </div>
+
+                    <h4>
+
+                        Mission
+
+                    </h4>
+
+                    <p>
+
+                        To provide quality education
+                        in Mathematics through
+                        innovative teaching,
+                        academic excellence
+                        and research-based learning.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Vision -->
+
+            <div class="col-lg-4">
+
+                <div class="feature-card h-100"
+                    data-aos="zoom-in"
+                    data-aos-delay="150">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </div>
+
+                    <h4>
+
+                        Vision
+
+                    </h4>
+
+                    <p>
+
+                        To become a centre of excellence
+                        for mathematical education,
+                        producing competent graduates
+                        with leadership,
+                        ethics and innovation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Objectives -->
+
+            <div class="col-lg-4">
+
+                <div class="feature-card h-100"
+                    data-aos="zoom-in"
+                    data-aos-delay="300">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+                    <h4>
+
+                        Objectives
+
+                    </h4>
+
+                    <p>
+
+                        Develop logical thinking,
+                        analytical ability,
+                        research skills,
+                        teamwork and professional
+                        competence among students.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+            CORE VALUES
+====================================== -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5"
+            data-aos="fade-up">
+
+            <h2 class="section-title">
+
+                Core Values
+
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="value-box"
+                    data-aos="fade-up">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <h5>
+
+                        Knowledge
+
+                    </h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="value-box"
+                    data-aos="fade-up"
+                    data-aos-delay="100">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <h5>
+
+                        Innovation
+
+                    </h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="value-box"
+                    data-aos="fade-up"
+                    data-aos-delay="200">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h5>
+
+                        Teamwork
+
+                    </h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="value-box"
+                    data-aos="fade-up"
+                    data-aos-delay="300">
+
+                    <i class="fa-solid fa-medal"></i>
+
+                    <h5>
+
+                        Excellence
+
+                    </h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+        DEPARTMENT STATISTICS
+====================================== -->
+    <section class="statistics-section py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5"
+            data-aos="fade-up">
+
+            <span class="sub-title">
+
+                Department Overview
+
+            </span>
+
+            <h2 class="section-title">
+
+                Department Statistics
+
+            </h2>
+
+            <p class="text-muted">
+
+                A quick overview of our academic achievements and facilities.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="counter-box text-center">
+
+                    <i class="fa-solid fa-user-graduate"></i>
+
+                    <h2>
+
+                        1000+
+
+                    </h2>
+
+                    <p>
+
+                        Students
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="counter-box text-center">
+
+                    <i class="fa-solid fa-chalkboard-user"></i>
+
+                    <h2>
+
+                        10+
+
+                    </h2>
+
+                    <p>
+
+                        Faculty Members
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="counter-box text-center">
+
+                    <i class="fa-solid fa-book"></i>
+
+                    <h2>
+
+                        15+
+
+                    </h2>
+
+                    <p>
+
+                        Academic Courses
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="counter-box text-center">
+
+                    <i class="fa-solid fa-award"></i>
+
+                    <h2>
+
+                        60+
+
+                    </h2>
+
+                    <p>
+
+                        Years of Excellence
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+        ACADEMIC FACILITIES
+====================================== -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5"
+            data-aos="fade-up">
+
+            <span class="sub-title">
+
+                Academic Environment
+
+            </span>
+
+            <h2 class="section-title">
+
+                Academic Facilities
+
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="facility-card h-100"
+                    data-aos="fade-up">
+
+                    <i class="fa-solid fa-book-open-reader"></i>
+
+                    <h4>
+
+                        Central Library
+
+                    </h4>
+
+                    <p>
+
+                        A rich collection of Mathematics,
+                        Science and reference books,
+                        journals and academic resources.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="facility-card h-100"
+                    data-aos="fade-up"
+                    data-aos-delay="100">
+
+                    <i class="fa-solid fa-laptop-code"></i>
+
+                    <h4>
+
+                        ICT Support
+
+                    </h4>
+
+                    <p>
+
+                        Digital learning facilities,
+                        multimedia classrooms
+                        and internet-supported
+                        academic activities.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="facility-card h-100"
+                    data-aos="fade-up"
+                    data-aos-delay="200">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h4>
+
+                        Seminar & Workshops
+
+                    </h4>
+
+                    <p>
+
+                        Regular seminars,
+                        presentations,
+                        competitions
+                        and academic discussions.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="facility-card h-100"
+                    data-aos="fade-up">
+
+                    <i class="fa-solid fa-school"></i>
+
+                    <h4>
+
+                        Modern Classrooms
+
+                    </h4>
+
+                    <p>
+
+                        Spacious,
+                        well-ventilated
+                        classrooms designed
+                        for effective learning.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="facility-card h-100"
+                    data-aos="fade-up"
+                    data-aos-delay="100">
+
+                    <i class="fa-solid fa-people-group"></i>
+
+                    <h4>
+
+                        Student Activities
+
+                    </h4>
+
+                    <p>
+
+                        Cultural programmes,
+                        sports,
+                        debate,
+                        BNCC,
+                        Rover Scout
+                        and voluntary activities.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="facility-card h-100"
+                    data-aos="fade-up"
+                    data-aos-delay="200">
+
+                    <i class="fa-solid fa-handshake-angle"></i>
+
+                    <h4>
+
+                        Academic Guidance
+
+                    </h4>
+
+                    <p>
+
+                        Continuous academic
+                        mentoring,
+                        counselling
+                        and career guidance
+                        for students.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+      WHY STUDY MATHEMATICS
+====================================== -->
+
+<section class="why-math py-5 bg-light">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6"
+                data-aos="fade-right">
+
+                <img src="assets/images/math-classroom.jpg"
+                    class="img-fluid rounded-4 shadow"
+                    alt="Mathematics Department">
+
+            </div>
+
+            <div class="col-lg-6"
+                data-aos="fade-left">
+
+                <span class="sub-title">
+
+                    Why Choose Us
+
+                </span>
+
+                <h2 class="section-title">
+
+                    Why Study Mathematics at RGC?
+
+                </h2>
+
+                <ul class="list-unstyled mt-4">
+
+                    <li class="mb-3">
+
+                        <i class="fa-solid fa-circle-check text-primary me-2"></i>
+
+                        Experienced and dedicated faculty members.
+
+                    </li>
+
+                    <li class="mb-3">
+
+                        <i class="fa-solid fa-circle-check text-primary me-2"></i>
+
+                        Modern teaching and learning environment.
+
+                    </li>
+
+                    <li class="mb-3">
+
+                        <i class="fa-solid fa-circle-check text-primary me-2"></i>
+
+                        Strong academic reputation under National University.
+
+                    </li>
+
+                    <li class="mb-3">
+
+                        <i class="fa-solid fa-circle-check text-primary me-2"></i>
+
+                        Regular seminars, presentations and academic activities.
+
+                    </li>
+
+                    <li class="mb-3">
+
+                        <i class="fa-solid fa-circle-check text-primary me-2"></i>
+
+                        Friendly campus with excellent learning opportunities.
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+        COLLEGE ADMINISTRATION
+====================================== -->
+    <section class="administration-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5"
+            data-aos="fade-up">
+
+            <span class="sub-title">
+
+                College Leadership
+
+            </span>
+
+            <h2 class="section-title">
+
+                College Administration
+
+            </h2>
+
+            <p class="text-muted">
+
+                Meet the respected academic leaders of Rangpur Government College.
+
+            </p>
+
         </div>
 
         <div class="row g-4">
@@ -826,49 +1388,45 @@ EIIN : 127484
 
             <div class="col-lg-6">
 
-                <div class="card shadow border-0 h-100">
+                <div class="leader-card h-100 shadow">
 
                     <img src="assets/images/faculty/professor-ferozur-fahman.jpg"
-                        class="card-img-top"
-                        alt="Professor Ferozur Rahman">
+                        class="img-fluid"
+                        alt="Principal">
 
-                    <div class="card-body">
+                    <div class="leader-content">
 
-                        <h3 class="text-primary">
+                        <span class="badge bg-primary">
+
+                            Principal
+
+                        </span>
+
+                        <h3 class="mt-3">
+
                             Professor Ferozur Rahman
+
                         </h3>
 
-                        <h5 class="text-secondary">
-                            Principal
-                        </h5>
+                        <p class="text-muted">
+
+                            BCS (General Education), 15th Batch
+
+                        </p>
 
                         <hr>
 
                         <p>
 
-                            <strong>BCS (General Education)</strong>
-
-                        </p>
-
-                        <p>
-
-                            15th Batch
-
-                        </p>
-
-                        <p>
-
-                            <i class="fas fa-phone text-primary"></i>
+                            <i class="fa-solid fa-phone text-primary me-2"></i>
 
                             01718-526048
 
                         </p>
 
-                        <a href="https://rangpur.college.gov.bd/pages/office-heads/%E0%A6%89%E0%A6%AA%E0%A6%BE%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A7%8D%E0%A6%B7-594a5d-696ca88635ce18e1c05c8d8f"
-
-                            class="btn btn-primary"
-
-                            target="_blank">
+                        <a href="https://rangpur.college.gov.bd/"
+                            target="_blank"
+                            class="btn btn-outline-primary rounded-pill">
 
                             View Profile
 
@@ -884,55 +1442,45 @@ EIIN : 127484
 
             <div class="col-lg-6">
 
-                <div class="card shadow border-0 h-100">
+                <div class="leader-card h-100 shadow">
 
                     <img src="assets/images/faculty/professor-abu-bakr-siddique.jpg"
+                        class="img-fluid"
+                        alt="Vice Principal">
 
-                        class="card-img-top"
+                    <div class="leader-content">
 
-                        alt="Professor Md. Abu Bakr Siddique">
+                        <span class="badge bg-warning text-dark">
 
-                    <div class="card-body">
+                            Vice Principal
 
-                        <h3 class="text-primary">
+                        </span>
+
+                        <h3 class="mt-3">
 
                             Professor Md. Abu Bakr Siddique
 
                         </h3>
 
-                        <h5 class="text-secondary">
+                        <p class="text-muted">
 
-                            Vice Principal
+                            BCS (General Education), 18th Batch
 
-                        </h5>
+                        </p>
 
                         <hr>
 
                         <p>
 
-                            <strong>BCS (General Education)</strong>
-
-                        </p>
-
-                        <p>
-
-                            18th Batch
-
-                        </p>
-
-                        <p>
-
-                            <i class="fas fa-phone text-primary"></i>
+                            <i class="fa-solid fa-phone text-primary me-2"></i>
 
                             01712-210113
 
                         </p>
 
-                        <a href="https://rangpur.college.gov.bd/pages/office-heads/%E0%A6%85%E0%A6%A7%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A7%8D%E0%A6%B7-952c17-696ca88735ce18e1c05c8dc6"
-
-                            class="btn btn-primary"
-
-                            target="_blank">
+                        <a href="https://rangpur.college.gov.bd/"
+                            target="_blank"
+                            class="btn btn-outline-primary rounded-pill">
 
                             View Profile
 
@@ -950,15 +1498,191 @@ EIIN : 127484
 
 </section>
 
-<!-- ================= Footer ================= -->
+<!-- =====================================
+            ACHIEVEMENTS
+====================================== -->
 
-<footer class="bg-primary text-white pt-5 pb-3">
+<section class="py-5 bg-light">
 
     <div class="container">
 
-        <div class="row">
+        <div class="text-center mb-5"
+            data-aos="fade-up">
+
+            <span class="sub-title">
+
+                Excellence
+
+            </span>
+
+            <h2 class="section-title">
+
+                Our Achievements
+
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="achievement-card text-center">
+
+                    <i class="fa-solid fa-medal"></i>
+
+                    <h4>
+
+                        Academic Excellence
+
+                    </h4>
+
+                    <p>
+
+                        Consistent academic performance under the National University.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="achievement-card text-center">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h4>
+
+                        Skilled Graduates
+
+                    </h4>
+
+                    <p>
+
+                        Thousands of graduates serving in education, research and public service.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="achievement-card text-center">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                    <h4>
+
+                        Student Success
+
+                    </h4>
+
+                    <p>
+
+                        Outstanding achievements in academic and extracurricular activities.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="achievement-card text-center">
+
+                    <i class="fa-solid fa-building-columns"></i>
+
+                    <h4>
+
+                        Heritage
+
+                    </h4>
+
+                    <p>
+
+                        More than sixty years of contribution to higher education.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+            ABOUT CTA
+====================================== -->
+
+<section class="contact-cta">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-8">
+
+                <h2>
+
+                    Join the Department of Mathematics
+
+                </h2>
+
+                <p>
+
+                    We are committed to academic excellence,
+                    innovation and developing future mathematicians.
+                    Explore our department and become part of our journey.
+
+                </p>
+
+            </div>
+
+            <div class="col-lg-4 text-lg-end">
+
+                <a href="contact.html"
+                    class="btn btn-warning btn-lg rounded-pill px-4">
+
+                    <i class="fa-solid fa-envelope me-2"></i>
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+                FOOTER
+====================================== -->
+    <footer class="footer">
+
+    <div class="container">
+
+        <div class="row gy-5">
+
+            <!-- Department Information -->
 
             <div class="col-lg-4">
+
+                <img src="assets/icons/RGC Dep of Math logo.png"
+                    width="80"
+                    class="mb-3"
+                    alt="Department Logo">
 
                 <h4>
 
@@ -968,114 +1692,121 @@ EIIN : 127484
 
                 <p>
 
-                    Rangpur Government College,
-                    Rangpur-5400,
-                    Bangladesh.
+                    Rangpur Government College<br>
+                    Rangpur-5400<br>
+                    Bangladesh
+
+                </p>
+
+                <p>
+
+                    Dedicated to excellence in
+                    teaching, learning,
+                    research and innovation.
 
                 </p>
 
             </div>
 
-            <div class="col-lg-4">
+            <!-- Quick Links -->
 
-                <h4>
+            <div class="col-lg-2">
+
+                <h5>
 
                     Quick Links
 
-                </h4>
+                </h5>
 
-                <ul class="list-unstyled">
+                <ul class="footer-links">
 
-                    <li>
+                    <li><a href="index.html">Home</a></li>
 
-                        <a href="index.html"
-                            class="text-white">
+                    <li><a href="about.html">About</a></li>
 
-                            Home
+                    <li><a href="faculty.html">Faculty</a></li>
 
-                        </a>
+                    <li><a href="resources.html">Resources</a></li>
 
-                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
 
-                    <li>
-
-                        <a href="about.html"
-                            class="text-white">
-
-                            About
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="faculty.html"
-                            class="text-white">
-
-                            Faculty
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="resources.html"
-                            class="text-white">
-
-                            Resources
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="contact.html"
-                            class="text-white">
-
-                            Contact
-
-                        </a>
-
-                    </li>
+                    <li><a href="contact.html">Contact</a></li>
 
                 </ul>
 
             </div>
 
-            <div class="col-lg-4">
+            <!-- Contact -->
 
-                <h4>
+            <div class="col-lg-3">
+
+                <h5>
 
                     Contact
 
-                </h4>
+                </h5>
 
                 <p>
 
-                    <i class="fas fa-phone"></i>
+                    <i class="fa-solid fa-envelope me-2"></i>
 
-                    0521-63110
+                    rgc.mathematics@gmail.com
 
                 </p>
 
                 <p>
 
-                    <i class="fas fa-envelope"></i>
+                    <i class="fa-solid fa-phone me-2"></i>
 
-                    rangpurcollege1984@gmail.com
+                    +8801712444826
 
                 </p>
 
                 <p>
 
-                    <i class="fas fa-globe"></i>
+                    <i class="fa-solid fa-location-dot me-2"></i>
 
-                    www.rangpur.college.gov.bd
+                    Rangpur Government College,
+                    Rangpur
 
                 </p>
+
+            </div>
+
+            <!-- Social -->
+
+            <div class="col-lg-3">
+
+                <h5>
+
+                    Follow Us
+
+                </h5>
+
+                <div class="social-links">
+
+                    <a href="https://www.facebook.com/rangpurgovtcollege/"
+                        target="_blank">
+
+                        <i class="fab fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="https://rangpur.college.gov.bd/"
+                        target="_blank">
+
+                        <i class="fa-solid fa-globe"></i>
+
+                    </a>
+
+                    <a href="https://en.wikipedia.org/wiki/Rangpur_Government_College"
+                        target="_blank">
+
+                        <i class="fab fa-wikipedia-w"></i>
+
+                    </a>
+
+                </div>
 
             </div>
 
@@ -1083,15 +1814,30 @@ EIIN : 127484
 
         <hr>
 
-        <div class="text-center">
+        <div class="row align-items-center">
 
-            © 2026
+            <div class="col-md-6">
 
-            Department of Mathematics |
+                <p class="mb-0">
 
-            Rangpur Government College |
+                    © 2026 Department of Mathematics,
+                    Rangpur Government College.
+                    All Rights Reserved.
 
-            All Rights Reserved.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end">
+
+                <p class="mb-0">
+
+                    Designed & Developed for the
+                    Department of Mathematics.
+
+                </p>
+
+            </div>
 
         </div>
 
@@ -1099,55 +1845,65 @@ EIIN : 127484
 
 </footer>
 
-<!-- Back To Top -->
+<!-- =====================================
+            BACK TO TOP
+====================================== -->
 
-<button
+<button id="topBtn"
+    class="btn btn-primary rounded-circle">
 
-id="topBtn"
-
-class="btn btn-warning"
-
-style="position:fixed;bottom:20px;right:20px;display:none;z-index:999;">
-
-<i class="fas fa-arrow-up"></i>
+    <i class="fa-solid fa-arrow-up"></i>
 
 </button>
 
-<!-- Bootstrap -->
+<!-- =====================================
+        BOOTSTRAP JS
+====================================== -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- =====================================
+            AOS JS
+====================================== -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
 
-let topBtn=document.getElementById("topBtn");
+AOS.init({
 
-window.onscroll=function(){
-
-if(document.body.scrollTop>300 ||
-
-document.documentElement.scrollTop>300){
-
-topBtn.style.display="block";
-
-}else{
-
-topBtn.style.display="none";
-
-}
-
-};
-
-topBtn.onclick=function(){
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
+    duration: 900,
+    once: true
 
 });
 
-};
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 300) {
+
+        topBtn.style.display = "block";
+
+    } else {
+
+        topBtn.style.display = "none";
+
+    }
+
+});
+
+topBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
 
 </script>
 
