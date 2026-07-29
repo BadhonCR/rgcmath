@@ -604,6 +604,17 @@ section {
     margin-top: -60px;
     position: relative;
     z-index: 10;
+   padding-bottom: 30px; /* নিচে কিছু স্পেস */
+}
+
+/* যদি মোবাইলে সমস্যা হয় */
+@media (max-width: 768px) {
+    .hero-stats {
+        margin-top: -30px; /* মোবাইলে কম নেগেটিভ মার্জিন */
+    }
+    .stat-box {
+        padding: 25px 15px; /* ছোট স্ক্রিনে কম প্যাডিং */
+    }
 }
 
 /* ---------- Head Message (Home) ---------- */
