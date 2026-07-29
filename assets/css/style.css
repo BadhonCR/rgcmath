@@ -88,7 +88,7 @@ body {
     box-shadow: none;
 }
 
-/* ---------- Common Hero (used by Contact, Faculty, Resources) ---------- */
+/* ---------- Common Hero (Contact, Faculty, Resources) ---------- */
 .contact-hero {
     position: relative;
     min-height: 420px;
@@ -127,7 +127,7 @@ body {
     color: var(--secondary);
 }
 
-/* ---------- About Hero (same as contact-hero but with its own class) ---------- */
+/* ---------- About Hero ---------- */
 .about-hero {
     position: relative;
     min-height: 420px;
@@ -191,7 +191,7 @@ section {
     letter-spacing: 1px;
 }
 
-/* ---------- Common Stat Box (Home, About, Faculty) ---------- */
+/* ---------- Common Stat Box ---------- */
 .stat-box {
     background: #fff;
     border-radius: var(--radius);
@@ -222,7 +222,7 @@ section {
     font-weight: 500;
 }
 
-/* ---------- Common Faculty Card (Faculty & Home) ---------- */
+/* ---------- Common Faculty Card ---------- */
 .faculty-card {
     background: #fff;
     border-radius: var(--radius);
@@ -286,7 +286,7 @@ section {
     color: var(--blue);
 }
 
-/* ---------- Contact Box (Contact Page) ---------- */
+/* ---------- Contact Box ---------- */
 .contact-box {
     background: #fff;
     border-radius: 20px;
@@ -331,7 +331,7 @@ section {
     color: var(--blue);
 }
 
-/* ---------- Staff Card (Contact) ---------- */
+/* ---------- Staff Card ---------- */
 .staff-card {
     background: #fff;
     border: none;
@@ -508,10 +508,10 @@ section {
     margin-bottom: 20px;
 }
 
-/* ---------- Home Specific ---------- */
+/* ---------- Home Hero ---------- */
 .hero-section {
     position: relative;
-    min-height: 100vh;
+    min-height: 90vh; /* 100vh থেকে কমিয়ে ওভারল্যাপ ঠিক করা */
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -520,6 +520,7 @@ section {
         linear-gradient(rgba(0,35,80,.75), rgba(0,35,80,.75)),
         url("../assets/images/RGC Campus.jpg") 
         center center/cover no-repeat;
+    padding-bottom: 40px;
 }
 .hero-overlay {
     position: absolute;
@@ -601,20 +602,10 @@ section {
 
 /* ---------- Home Stats (overlap hero) ---------- */
 .hero-stats {
-    margin-top: -60px;
+    margin-top: -80px; /* বেশি টান দিয়ে ওভারল্যাপ করানো */
     position: relative;
-    z-index: 10;
-   padding-bottom: 30px; /* নিচে কিছু স্পেস */
-}
-
-/* যদি মোবাইলে সমস্যা হয় */
-@media (max-width: 768px) {
-    .hero-stats {
-        margin-top: -30px; /* মোবাইলে কম নেগেটিভ মার্জিন */
-    }
-    .stat-box {
-        padding: 25px 15px; /* ছোট স্ক্রিনে কম প্যাডিং */
-    }
+    z-index: 20;
+    padding-bottom: 30px;
 }
 
 /* ---------- Head Message (Home) ---------- */
@@ -999,7 +990,7 @@ section {
     box-shadow: 0 8px 20px rgba(0,0,0,.25);
 }
 
-/* ---------- Responsive (All pages) ---------- */
+/* ---------- Responsive ---------- */
 @media (max-width: 991px) {
     .about-hero h1,
     .contact-hero h1 {
@@ -1051,6 +1042,9 @@ section {
     .contact-hero p {
         font-size: 1rem;
     }
+    .hero-section {
+        min-height: 80vh;
+    }
     .hero-title {
         font-size: 2.2rem;
     }
@@ -1059,6 +1053,9 @@ section {
     }
     .section-title {
         font-size: 28px;
+    }
+    .hero-stats {
+        margin-top: -30px; /* মোবাইলে কম ওভারল্যাপ */
     }
     .notice-card {
         flex-direction: column;
@@ -1070,9 +1067,6 @@ section {
     .event-item {
         flex-direction: column;
         text-align: center;
-    }
-    .hero-stats {
-        margin-top: 0;
     }
     .head-card {
         padding: 30px;
