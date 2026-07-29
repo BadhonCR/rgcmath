@@ -1,2329 +1,1449 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <!-- ==========================================
-                BASIC META
-    =========================================== -->
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Department of Mathematics |
-        Rangpur Government College
-    </title>
-
-    <meta name="description"
-        content="Official Website of the Department of Mathematics, Rangpur Government College, Rangpur.">
-
-    <meta name="keywords"
-        content="Department of Mathematics,Rangpur Government College,Mathematics,RGC,Rangpur">
-
-    <meta name="author"
-        content="Department of Mathematics">
-
-    <meta name="theme-color"
-        content="#003366">
-
-    <!-- Open Graph -->
-
-    <meta property="og:title"
-        content="Department of Mathematics | Rangpur Government College">
-
-    <meta property="og:type"
-        content="website">
-
-    <meta property="og:image"
-        content="assets/icons/RGC Dep of Math logo.png">
-
-    <meta property="og:description"
-        content="Official Website of Department of Mathematics, Rangpur Government College.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department of Mathematics | Rangpur Government College</title>
+    <meta name="description" content="Official Website of the Department of Mathematics, Rangpur Government College." />
+    <meta name="theme-color" content="#003366" />
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Bootstrap -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
     <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
-    <link rel="stylesheet"
-        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <style>
+        /* ========================================
+                   GLOBAL STYLES
+                ======================================== */
+        :root {
+            --primary: #003366;
+            --secondary: #FFC107;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --shadow: 0 12px 35px rgba(0,0,0,0.08);
+            --radius: 22px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+        }
+        .section-tag {
+            color: #0d6efd;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .section-title span {
+            color: var(--secondary);
+        }
+        .bg-light-custom {
+            background: #f4f7fb;
+        }
 
-    <!-- Main CSS -->
+        /* ---------- Top Header ---------- */
+        .top-header {
+            background: #012a5e;
+            color: #fff;
+            font-size: 0.9rem;
+            padding: 8px 0;
+        }
+        .top-header a {
+            color: #fff;
+            transition: 0.3s;
+        }
+        .top-header a:hover {
+            color: var(--secondary);
+        }
+        .top-header i {
+            color: var(--secondary);
+            margin-right: 6px;
+        }
 
-    <link rel="stylesheet"
-        href="assets/css/style.css">
+        /* ---------- Navbar ---------- */
+        .navbar {
+            background: var(--primary);
+            padding: 12px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        .navbar-brand {
+            color: #fff;
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+        .navbar-brand:hover {
+            color: var(--secondary);
+        }
+        .navbar-brand img {
+            width: 50px;
+        }
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            padding: 10px 15px !important;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .nav-link:hover,
+        .nav-link.active {
+            background: #0d6efd;
+            color: #fff !important;
+        }
+        .navbar-toggler {
+            border: none;
+        }
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
 
+        /* ---------- Hero Section ---------- */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            color: #fff;
+            background: linear-gradient(rgba(0,35,80,0.75), rgba(0,35,80,0.75)),
+                url("assets/images/RGC Campus.jpg") center center/cover no-repeat;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(255,193,7,0.18), transparent 45%);
+        }
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .hero-title span {
+            display: block;
+            color: var(--secondary);
+        }
+        .hero-text {
+            font-size: 1.15rem;
+            max-width: 650px;
+            line-height: 1.9;
+            opacity: 0.95;
+        }
+        .hero-badge {
+            display: inline-block;
+            padding: 10px 22px;
+            border-radius: 40px;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(8px);
+            font-weight: 600;
+        }
+        .hero-badge i {
+            color: var(--secondary);
+            margin-right: 8px;
+        }
+        .hero-card {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(14px);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+        }
+        .hero-logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .hero-card h3 {
+            font-weight: 700;
+        }
+        .hero-card p {
+            opacity: 0.9;
+        }
+        .hero-info {
+            text-align: left;
+        }
+        .hero-info div {
+            margin-bottom: 15px;
+        }
+        .hero-info i {
+            width: 25px;
+            color: var(--secondary);
+        }
+        .scroll-down {
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+        }
+        .scroll-down a {
+            color: #fff;
+            font-size: 28px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* ---------- Statistics (overlap hero) ---------- */
+        .hero-stats {
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+        .stat-box {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: 0.35s;
+            height: 100%;
+        }
+        .stat-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+        }
+        .stat-box i {
+            font-size: 2.6rem;
+            color: #0d6efd;
+            margin-bottom: 20px;
+        }
+        .stat-box h2 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .stat-box p {
+            margin: 0;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* ---------- About Section ---------- */
+        .about-section .feature-item {
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+        .about-section .feature-item i {
+            color: #0d6efd;
+            margin-right: 10px;
+        }
+        .vision-card,
+        .mission-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            height: 100%;
+            transition: 0.3s;
+        }
+        .vision-card:hover,
+        .mission-card:hover {
+            transform: translateY(-5px);
+        }
+        .vision-card .icon,
+        .mission-card .icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #0d6efd;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* ---------- Why Choose Us ---------- */
+        .why-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 35px;
+            text-align: center;
+            transition: 0.35s;
+            box-shadow: var(--shadow);
+            height: 100%;
+        }
+        .why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+        }
+        .why-card .icon {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+        }
+
+        /* ---------- Head Message ---------- */
+        .head-image img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+        }
+        .head-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .head-social a {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.35s;
+        }
+        .head-social a:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: translateY(-6px);
+        }
+        .head-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 45px;
+            box-shadow: 0 18px 45px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .quote-icon {
+            position: absolute;
+            right: 35px;
+            top: 30px;
+            font-size: 60px;
+            color: #e9eef7;
+        }
+        .signature {
+            border-left: 5px solid var(--primary);
+            padding-left: 20px;
+        }
+        .signature h5 {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* ---------- Achievement Cards ---------- */
+        .achievement-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 35px;
+            box-shadow: var(--shadow);
+            transition: 0.35s;
+            text-align: center;
+            height: 100%;
+        }
+        .achievement-card:hover {
+            transform: translateY(-10px);
+        }
+        .achievement-card i {
+            font-size: 48px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        .achievement-card h3 {
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        /* ---------- Notice & Event ---------- */
+        .notice-card {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.35s;
+            margin-bottom: 25px;
+        }
+        .notice-card:hover {
+            transform: translateY(-6px);
+        }
+        .notice-date {
+            min-width: 95px;
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 22px 10px;
+        }
+        .notice-date h5 {
+            margin: 0;
+            font-weight: 700;
+        }
+        .notice-content {
+            padding: 25px;
+        }
+        .notice-content h5 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .notice-content a {
+            font-weight: 600;
+            color: #0d6efd;
+        }
+        .notice-content a i {
+            transition: 0.3s;
+        }
+        .notice-content a:hover i {
+            transform: translateX(5px);
+        }
+
+        .event-box {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 35px;
+            height: 100%;
+            box-shadow: var(--shadow);
+        }
+        .event-box h3 {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        .event-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+        .event-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        /* ---------- Faculty Preview ---------- */
+        .faculty-card {
+            background: #fff;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.4s;
+            height: 100%;
+        }
+        .faculty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+        }
+        .faculty-card img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .faculty-card:hover img {
+            transform: scale(1.05);
+        }
+        .faculty-content {
+            padding: 28px;
+        }
+        .faculty-content h4 {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        .faculty-content span {
+            color: #0d6efd;
+            font-weight: 600;
+        }
+
+        /* ---------- Gallery ---------- */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,51,102,0.55);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 0.35s;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-overlay i {
+            color: #fff;
+            font-size: 40px;
+        }
+
+        /* ---------- Testimonial ---------- */
+        .testimonial-card {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 45px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+        .testimonial-card img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 25px auto 15px;
+        }
+        .testimonial-card .quote-icon {
+            position: static;
+            color: var(--secondary);
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: var(--primary);
+            border-radius: 50%;
+            padding: 20px;
+        }
+
+        /* ---------- Quick Links ---------- */
+        .quick-card {
+            display: block;
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 40px 25px;
+            text-align: center;
+            color: var(--primary);
+            transition: 0.35s;
+            box-shadow: var(--shadow);
+        }
+        .quick-card:hover {
+            background: var(--primary);
+            color: #fff;
+            transform: translateY(-10px);
+        }
+        .quick-card i {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        /* ---------- CTA Section ---------- */
+        .home-cta {
+            background: linear-gradient(135deg, var(--primary), #0B3D91);
+            color: #fff;
+            padding: 80px 0;
+        }
+        .home-cta h2 {
+            font-weight: 700;
+        }
+        .home-cta p {
+            opacity: 0.9;
+        }
+
+        /* ---------- Footer ---------- */
+        .footer {
+            background: #001f3f;
+            color: #fff;
+            padding: 70px 0 20px;
+        }
+        .footer h4,
+        .footer h5 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .footer p {
+            color: #d8d8d8;
+            line-height: 1.8;
+        }
+        .footer hr {
+            border-color: rgba(255,255,255,0.15);
+            margin: 35px 0 20px;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        .footer-links a {
+            color: #dcdcdc;
+            transition: 0.3s;
+        }
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 8px;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .social-links a {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: 0.35s;
+        }
+        .social-links a:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: translateY(-6px);
+        }
+
+        /* ---------- Back to Top ---------- */
+        #topBtn {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            display: none;
+            z-index: 999;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            background: var(--primary);
+            color: #fff;
+            font-size: 20px;
+        }
+        #topBtn:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 991px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            .hero-card {
+                margin-top: 40px;
+            }
+            .head-card {
+                margin-top: 30px;
+            }
+            .quote-icon {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+            .top-header {
+                display: none;
+            }
+            .navbar-brand h5 {
+                font-size: 17px;
+            }
+            .navbar-brand small {
+                font-size: 12px;
+            }
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .hero-text {
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .notice-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .notice-date {
+                width: 100%;
+            }
+            .event-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-stats {
+                margin-top: 0;
+            }
+            .head-card {
+                padding: 30px;
+            }
+            .testimonial-card {
+                padding: 30px 20px;
+            }
+            .footer {
+                text-align: center;
+            }
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- =====================================
-            TOP HEADER
-====================================== -->
-
-<div class="top-header">
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-lg-6">
-
-                <span>
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                    rgc.mathematics@gmail.com
-
-                </span>
-
-                <span class="ms-4">
-
-                    <i class="fa-solid fa-phone"></i>
-
-                    +8801712444826
-
-                </span>
-
+    <!-- ============================================
+    TOP HEADER
+    ============================================ -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span><i class="fa-solid fa-envelope"></i> rgc.mathematics@gmail.com</span>
+                    <span class="ms-4"><i class="fa-solid fa-phone"></i> +8801712444826</span>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a href="https://rangpur.college.gov.bd/" target="_blank">Official College Website</a>
+                </div>
             </div>
-
-            <div class="col-lg-6 text-lg-end">
-
-                <a href="https://rangpur.college.gov.bd/"
-                    target="_blank">
-
-                    Official College Website
-
-                </a>
-
-            </div>
-
         </div>
-
     </div>
 
-</div>
-
-<!-- =====================================
-                NAVBAR
-====================================== -->
-
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-
-    <div class="container">
-
-        <a class="navbar-brand d-flex align-items-center"
-            href="index.html">
-
-            <img src="assets/icons/RGC Dep of Math logo.png"
-                width="60"
-                class="me-3"
-                alt="Department Logo">
-
-            <div>
-
-                <h5 class="m-0 fw-bold">
-
-                    Department of Mathematics
-
-                </h5>
-
-                <small>
-
-                    Rangpur Government College
-
-                </small>
-
-            </div>
-
-        </a>
-
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbar">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <div
-            class="collapse navbar-collapse"
-            id="navbar">
-
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-
-                    <a class="nav-link active"
-                        href="index.html">
-
-                        Home
-
-                    </a>
-
-                </li>
-
-                <li class="nav-item">
-
-                    <a class="nav-link"
-                        href="about.html">
-
-                        About
-
-                    </a>
-
-                </li>
-
-                <li class="nav-item">
-
-                    <a class="nav-link"
-                        href="faculty.html">
-
-                        Faculty
-
-                    </a>
-
-                </li>
-
-                <li class="nav-item">
-
-                    <a class="nav-link"
-                        href="resources.html">
-
-                        Resources
-
-                    </a>
-
-                </li>
-
-                <li class="nav-item">
-
-                    <a class="nav-link"
-                        href="contact.html">
-
-                        Contact
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
-<!-- =====================================
-            HERO SECTION
-====================================== -->
-
-<section class="hero-section">
-
-    <div class="hero-overlay"></div>
-
-    <div class="container position-relative">
-
-        <div class="row align-items-center min-vh-100">
-
-            <!-- Left Content -->
-
-            <div class="col-lg-7 text-white"
-                data-aos="fade-right">
-
-                <span class="hero-badge">
-
-                    <i class="fa-solid fa-graduation-cap"></i>
-
-                    Welcome to
-
-                </span>
-
-                <h1 class="hero-title mt-4">
-
-                    Department of Mathematics
-
-                    <span>
-
-                        Rangpur Government College
-
-                    </span>
-
-                </h1>
-
-                <p class="hero-text mt-4">
-
-                    The Department of Mathematics is committed
-                    to excellence in teaching, research and
-                    academic innovation. We inspire students
-                    through logical thinking, analytical skills,
-                    creativity and modern mathematical education.
-
-                </p>
-
-                <div class="hero-buttons mt-5">
-
-                    <a href="about.html"
-                        class="btn btn-warning btn-lg rounded-pill px-4 me-3">
-
-                        <i class="fa-solid fa-circle-info"></i>
-
-                        About Department
-
-                    </a>
-
-                    <a href="faculty.html"
-                        class="btn btn-outline-light btn-lg rounded-pill px-4">
-
-                        <i class="fa-solid fa-users"></i>
-
-                        Faculty Members
-
-                    </a>
-
+    <!-- ============================================
+    NAVBAR
+    ============================================ -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/icons/RGC Dep of Math logo.png" class="me-3" alt="Logo" />
+                <div>
+                    <h5 class="m-0 fw-bold">Department of Mathematics</h5>
+                    <small>Rangpur Government College</small>
                 </div>
-
-            </div>
-
-            <!-- Right Card -->
-
-            <div class="col-lg-5 mt-5 mt-lg-0"
-                data-aos="fade-left">
-
-                <div class="hero-card">
-
-                    <img src="assets/icons/RGC Dep of Math logo.png"
-                        class="hero-logo"
-                        alt="Department Logo">
-
-                    <h3>
-
-                        Department of Mathematics
-
-                    </h3>
-
-                    <p>
-
-                        Rangpur Government College
-
-                    </p>
-
-                    <hr>
-
-                    <div class="hero-info">
-
-                        <div>
-
-                            <i class="fa-solid fa-location-dot"></i>
-
-                            Rangpur, Bangladesh
-
-                        </div>
-
-                        <div>
-
-                            <i class="fa-solid fa-envelope"></i>
-
-                            rgc.mathematics@gmail.com
-
-                        </div>
-
-                        <div>
-
-                            <i class="fa-solid fa-phone"></i>
-
-                            +8801712444826
-
-                        </div>
-
-                    </div>
-
-                    <a href="contact.html"
-                        class="btn btn-primary w-100 rounded-pill mt-4">
-
-                        Contact Department
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- Scroll Down -->
-
-    <div class="scroll-down">
-
-        <a href="#about-department">
-
-            <i class="fa-solid fa-angles-down"></i>
-
-        </a>
-
-    </div>
-
-</section>
-
-<!-- =====================================
-        QUICK STATISTICS
-====================================== -->
-
-<section class="hero-stats">
-
-    <div class="container">
-
-        <div class="row g-4">
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="stat-box"
-                    data-aos="zoom-in">
-
-                    <i class="fa-solid fa-user-graduate"></i>
-
-                    <h2>
-
-                        350+
-
-                    </h2>
-
-                    <p>
-
-                        Students
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="stat-box"
-                    data-aos="zoom-in"
-                    data-aos-delay="100">
-
-                    <i class="fa-solid fa-chalkboard-user"></i>
-
-                    <h2>
-
-                        06
-
-                    </h2>
-
-                    <p>
-
-                        Faculty Members
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="stat-box"
-                    data-aos="zoom-in"
-                    data-aos-delay="200">
-
-                    <i class="fa-solid fa-book-open"></i>
-
-                    <h2>
-
-                        25+
-
-                    </h2>
-
-                    <p>
-
-                        Academic Courses
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="stat-box"
-                    data-aos="zoom-in"
-                    data-aos-delay="300">
-
-                    <i class="fa-solid fa-award"></i>
-
-                    <h2>
-
-                        100%
-
-                    </h2>
-
-                    <p>
-
-                        Academic Excellence
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- =====================================
-          ABOUT DEPARTMENT
-====================================== -->
-
-<section class="about-section py-5"
-    id="about-department">
-
-    <div class="container">
-
-        <div class="row align-items-center g-5">
-
-            <!-- Content -->
-
-                <div class="col-lg-12"
-                 data-aos="fade-up">
-
-                <span class="section-tag">
-
-                    ABOUT US
-
-                </span>
-
-                <h2 class="section-title mt-3">
-
-                    Department of Mathematics
-
-                </h2>
-
-                <p class="lead text-muted">
-
-                    Rangpur Government College
-
-                </p>
-
-                <p>
-
-                    The Department of Mathematics of
-                    Rangpur Government College is one
-                    of the leading academic departments
-                    under the National University of
-                    Bangladesh.
-
-                </p>
-
-                <p>
-
-                    The department provides quality
-                    education through experienced
-                    faculty members, modern teaching
-                    methods and academic activities
-                    that encourage analytical thinking,
-                    logical reasoning and research.
-
-                </p>
-
-                <!-- Features -->
-
-                <div class="row mt-4">
-
-                    <div class="col-md-6">
-
-                        <div class="feature-item">
-
-                            <i class="fa-solid fa-circle-check"></i>
-
-                            Quality Education
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6">
-
-                        <div class="feature-item">
-
-                            <i class="fa-solid fa-circle-check"></i>
-
-                            Experienced Teachers
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6">
-
-                        <div class="feature-item">
-
-                            <i class="fa-solid fa-circle-check"></i>
-
-                            Research Activities
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6">
-
-                        <div class="feature-item">
-
-                            <i class="fa-solid fa-circle-check"></i>
-
-                            Modern Learning
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Vision & Mission -->
-
-                <div class="row mt-5 g-4">
-
-                    <div class="col-md-6">
-
-                        <div class="vision-card">
-
-                            <div class="icon">
-
-                                <i class="fa-solid fa-eye"></i>
-
-                            </div>
-
-                            <h5>
-
-                                Our Vision
-
-                            </h5>
-
-                            <p>
-
-                                To become a centre of
-                                excellence in mathematics
-                                education, innovation and
-                                research.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6">
-
-                        <div class="mission-card">
-
-                            <div class="icon">
-
-                                <i class="fa-solid fa-bullseye"></i>
-
-                            </div>
-
-                            <h5>
-
-                                Our Mission
-
-                            </h5>
-
-                            <p>
-
-                                To produce skilled,
-                                creative and responsible
-                                graduates through quality
-                                teaching and research.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <a href="about.html"
-                    class="btn btn-primary btn-lg rounded-pill mt-5 px-4">
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                    Learn More
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =====================================
-        WHY CHOOSE US
-====================================== -->
-
-<section class="why-us py-5 bg-light">
-
-    <div class="container">
-
-        <div class="text-center mb-5"
-            data-aos="fade-up">
-
-            <span class="section-tag">
-
-                WHY CHOOSE US
-
-            </span>
-
-            <h2 class="section-title mt-3">
-
-                Why Study Mathematics Here?
-
-            </h2>
-
-            <p class="text-muted">
-
-                We are committed to providing an
-                inspiring academic environment.
-
-            </p>
-
-        </div>
-
-        <div class="row g-4">
-
-            <div class="col-lg-4">
-
-                <div class="why-card"
-                    data-aos="fade-up">
-
-                    <div class="icon">
-
-                        <i class="fa-solid fa-book-open"></i>
-
-                    </div>
-
-                    <h4>
-
-                        Quality Education
-
-                    </h4>
-
-                    <p>
-
-                        Modern curriculum with
-                        strong theoretical and
-                        practical knowledge.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4">
-
-                <div class="why-card"
-                    data-aos="fade-up"
-                    data-aos-delay="100">
-
-                    <div class="icon">
-
-                        <i class="fa-solid fa-user-group"></i>
-
-                    </div>
-
-                    <h4>
-
-                        Skilled Faculty
-
-                    </h4>
-
-                    <p>
-
-                        Dedicated teachers with
-                        excellent academic and
-                        research experience.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4">
-
-                <div class="why-card"
-                    data-aos="fade-up"
-                    data-aos-delay="200">
-
-                    <div class="icon">
-
-                        <i class="fa-solid fa-award"></i>
-
-                    </div>
-
-                    <h4>
-
-                        Academic Excellence
-
-                    </h4>
-
-                    <p>
-
-                        Preparing students for
-                        higher studies, research
-                        and professional careers.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- =====================================
-        MESSAGE FROM THE HEAD
-====================================== -->
-
-<section class="head-message py-5">
-
-    <div class="container">
-
-        <div class="text-center mb-5"
-            data-aos="fade-up">
-
-            <span class="section-tag">
-
-                HEAD'S MESSAGE
-
-            </span>
-
-            <h2 class="section-title mt-3">
-
-                Message from the Department Head
-
-            </h2>
-
-            <p class="text-muted">
-
-                Welcome to the Department of Mathematics,
-                Rangpur Government College.
-
-            </p>
-
-        </div>
-
-        <div class="row align-items-center g-5">
-
-            <!-- Head Image -->
-
-            <div class="col-lg-4"
-                data-aos="fade-right">
-
-                <div class="head-image text-center">
-
-                    <img src="assets/images/faculty/masuma-akhter.jpg"
-                        class="img-fluid rounded-4 shadow-lg"
-                        alt="Head of the Department">
-
-                       <div class="head-social mt-4">
-                            <!-- ফেসবুক লিঙ্ক -->
-                                <a href="https://www.facebook.com/masuma.akhter.469965" target="_blank" rel="noopener noreferrer">
-                                        <i class="fab fa-facebook-f"></i>
-                                </a>
-
-                                <!-- ইমেইল লিঙ্ক -->
-                                <a href="mailto:masumakhter2016@gmail.com">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </a>
-
-                                <!-- ফোন নম্বর লিঙ্ক -->
-                                <a href="tel:+8801712444826">
-                                    <i class="fa-solid fa-phone"></i>
-                                </a>
-                        </div>
-                </div>
-
-            </div>
-
-            <!-- Message -->
-
-            <div class="col-lg-8"
-                data-aos="fade-left">
-
-                <div class="head-card">
-
-                    <div class="quote-icon">
-
-                        <i class="fa-solid fa-quote-left"></i>
-
-                    </div>
-
-                    <h3>
-
-                        Welcome to Our Department
-
-                    </h3>
-
-                    <p>
-
-                        Mathematics is not merely a subject;
-                        it is the foundation of scientific
-                        thinking, innovation and technological
-                        advancement. Our department is dedicated
-                        to providing quality education through
-                        experienced faculty members, modern
-                        teaching methods and a friendly academic
-                        environment.
-
-                    </p>
-
-                    <p>
-
-                        We encourage our students to develop
-                        logical reasoning, critical thinking,
-                        creativity and research skills so that
-                        they become capable of contributing
-                        meaningfully to society and the nation.
-
-                    </p>
-
-                    <p>
-
-                        I warmly invite all students,
-                        guardians and visitors to explore
-                        our department and become a part
-                        of our academic journey.
-
-                    </p>
-
-                    <div class="signature mt-4">
-
-                        <h5 class="mb-1">
-
-                            Masuma Akhter
-
-                        </h5>
-
-                        <span>
-
-                            Head of the Department
-
-                        </span>
-
-                        <p class="mb-0">
-
-                            Department of Mathematics
-
-                        </p>
-
-                        <small>
-
-                            Rangpur Government College, Rangpur
-
-                        </small>
-
-                    </div>
-
-                    <div class="mt-4">
-
-                        <a href="faculty.html"
-                            class="btn btn-primary rounded-pill px-4 me-3">
-
-                            <i class="fa-solid fa-users"></i>
-
-                            Faculty Members
-
-                        </a>
-
-                        <a href="contact.html"
-                            class="btn btn-outline-primary rounded-pill px-4">
-
-                            <i class="fa-solid fa-envelope"></i>
-
-                            Contact
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =====================================
-        ACHIEVEMENTS
-====================================== -->
-
-<section class="achievement-section py-5 bg-light">
-
-    <div class="container">
-
-        <div class="text-center mb-5"
-            data-aos="fade-up">
-
-            <span class="section-tag">
-
-                ACHIEVEMENTS
-
-            </span>
-
-            <h2 class="section-title mt-3">
-
-                Department Highlights
-
-            </h2>
-
-        </div>
-
-        <div class="row g-4">
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="achievement-card">
-
-                    <i class="fa-solid fa-medal"></i>
-
-                    <h3>16+</h3>
-
-                    <p>
-
-                        Years of Academic Heritage
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="achievement-card">
-
-                    <i class="fa-solid fa-user-graduate"></i>
-
-                    <h3>350+</h3>
-
-                    <p>
-
-                        Current Students
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="achievement-card">
-
-                    <i class="fa-solid fa-chalkboard-user"></i>
-
-                    <h3>06</h3>
-
-                    <p>
-
-                        Faculty Members
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="achievement-card">
-
-                    <i class="fa-solid fa-award"></i>
-
-                    <h3>100%</h3>
-
-                    <p>
-
-                        Commitment to Excellence
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- =====================================
-            NOTICE & EVENTS
-====================================== -->
-
-<section class="notice-event-section py-5">
-
-    <div class="container">
-
-        <div class="text-center mb-5"
-            data-aos="fade-up">
-
-            <span class="section-tag">
-
-                LATEST UPDATE
-
-            </span>
-
-            <h2 class="section-title mt-3">
-
-                Latest Notices & Upcoming Events
-
-            </h2>
-
-            <p class="text-muted">
-
-                Stay updated with the latest academic notices,
-                seminars and department activities.
-
-            </p>
-
-        </div>
-
-        <div class="row g-4">
-
-            <!-- Latest Notices -->
-
-            <div class="col-lg-7">
-
-                <div class="notice-wrapper">
-
-                    <div class="notice-card"
-                        data-aos="fade-up">
-
-                        <div class="notice-date">
-
-                            <h5> Admission Information</h5>
-
-                        </div>
-
-                        <div class="notice-content">
-
-                            <p>
-
-                                National University admission
-                                information and circular.
-
-                            </p>
-
-                            <a href="https://www.nu.ac.bd/admissions/"
-                                target="_blank">
-
-                                Read More
-
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="notice-card"
-                        data-aos="fade-up"
-                        data-aos-delay="100">
-
-                        <div class="notice-date">
-
-                           <h5>
-
-                                University Notice
-
-                            </h5>
-
-                        </div>
-
-                        <div class="notice-content">
-                            
-                            <p>
-
-                                View the latest University newes and notice.
-
-                            </p>
-
-                            <a href="https://www.nu.ac.bd/recent-news-notice.php"
-                                 target="_blank">
-
-                                View Details
-
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="notice-card"
-                        data-aos="fade-up"
-                        data-aos-delay="200">
-
-                        <div class="notice-date">
-
-                            <h5>
-
-                                College Notice
-
-                            </h5>
-
-                        </div>
-
-                        <div class="notice-content">
-
-
-                            <p>
-
-                                Regular College announcements
-                                and student notices.
-
-                            </p>
-
-                            <a href="https://rangpur.college.gov.bd/pages/notices"
-                                 target="_blank">
-                                Learn More
-
-                                <i class="fa-solid fa-arrow-right"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Upcoming Events -->
-
-            <div class="col-lg-5">
-
-                <div class="event-box"
-                    data-aos="fade-left">
-
-                    <h3>
-
-                        Upcoming Events
-
-                    </h3>
-
-                    <hr>
-
-                    <div class="event-item">
-
-                        <div class="event-icon">
-
-                            <i class="fa-solid fa-calendar-days"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h6>
-
-                                Freshers' Reception
-
-                            </h6>
-
-                            <small>
-
-                                College Auditorium
-
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                    <div class="event-item">
-
-                        <div class="event-icon">
-
-                            <i class="fa-solid fa-users"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h6>
-
-                                Farewell Programme
-
-                            </h6>
-
-                            <small>
-
-                                Final Year Students
-
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                    <div class="event-item">
-
-                        <div class="event-icon">
-
-                            <i class="fa-solid fa-book-open"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h6>
-
-                                Mathematics Seminar
-
-                            </h6>
-
-                            <small>
-
-                                Academic Discussion
-
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                    <div class="event-item">
-
-                        <div class="event-icon">
-
-                            <i class="fa-solid fa-trophy"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h6>
-
-                                Annual Quiz Competition
-
-                            </h6>
-
-                            <small>
-
-                                Department Competition
-
-                            </small>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =====================================
-            QUICK LINKS
-====================================== -->
-
-<section class="quick-links py-5 bg-light">
-
-    <div class="container">
-
-        <div class="text-center mb-5">
-
-            <span class="section-tag">
-
-                QUICK ACCESS
-
-            </span>
-
-            <h2 class="section-title mt-3">
-
-                Useful Academic Links
-
-            </h2>
-
-        </div>
-
-        <div class="row g-4">
-
-            <div class="col-lg-3 col-md-6">
-
-                <a href="about.html"
-                    class="quick-card text-decoration-none">
-
-                    <i class="fa-solid fa-building-columns"></i>
-
-                    <h5>
-
-                        About Department
-
-                    </h5>
-
-                </a>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <a href="faculty.html"
-                    class="quick-card text-decoration-none">
-
-                    <i class="fa-solid fa-users"></i>
-
-                    <h5>
-
-                        Faculty Members
-
-                    </h5>
-
-                </a>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <a href="resources.html"
-                    class="quick-card text-decoration-none">
-
-                    <i class="fa-solid fa-book"></i>
-
-                    <h5>
-
-                        Resources
-
-                    </h5>
-
-                </a>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <a href="contact.html"
-                    class="quick-card text-decoration-none">
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                    <h5>
-
-                        Contact Us
-
-                    </h5>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- =====================================
-        FACULTY PREVIEW
-====================================== -->
-
-<section class="faculty-preview py-5">
-
-    <div class="container">
-
-        <div class="text-center mb-5"
-            data-aos="fade-up">
-
-            <span class="section-tag">
-
-                OUR FACULTY
-
-            </span>
-
-            <h2 class="section-title mt-3">
-
-                Meet Our Faculty Members
-
-            </h2>
-
-            <p class="text-muted">
-
-                Dedicated teachers committed to quality
-                education, research and student success.
-
-            </p>
-
-        </div>
-
-        <div class="row g-4">
-
-            <!-- Faculty 01 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="faculty-card"
-                    data-aos="fade-up">
-
-                    <img src="assets/images/faculty/masuma-akhter.jpg"
-                        class="img-fluid"
-                        alt="Head">
-
-                    <div class="faculty-content">
-
-                        <h4>
-
-                            Head of the Department
-
-                        </h4>
-
-                        <span>
-
-                            Department of Mathematics
-
-                        </span>
-
-                        <p>
-
-                            Academic leadership and teaching.
-
-                        </p>
-
-                        <a href="faculty.html"
-                            class="btn btn-outline-primary rounded-pill">
-
-                            View Profile
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Faculty 02 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="faculty-card"
-                    data-aos="fade-up"
-                    data-aos-delay="100">
-
-                    <img src="assets/images/faculty/faizar-rahman.jpg"
-                        class="img-fluid"
-                        alt="Faculty">
-
-                    <div class="faculty-content">
-
-                        <h4>
-
-                            Faculty Member
-
-                        </h4>
-
-                        <span>
-
-                            Associate Professor
-
-                        </span>
-
-                        <p>
-                            Passionate about
-                            mathematics education.
-
-                        </p>
-
-                        <a href="faculty.html"
-                            class="btn btn-outline-primary rounded-pill">
-
-                            View Profile
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Faculty 03 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="faculty-card"
-                    data-aos="fade-up"
-                    data-aos-delay="200">
-
-                    <img src="assets/images/faculty/hazzazul-alam.jpg"
-                        class="img-fluid"
-                        alt="Faculty">
-
-                    <div class="faculty-content">
-
-                        <h4>
-
-                            Faculty Member
-
-                        </h4>
-
-                        <span>
-
-                            Assistant Professor
-
-                        </span>
-
-                        <p>
-
-                            Teaching undergraduate
-                            mathematics courses.
-
-                        </p>
-
-                        <a href="faculty.html"
-                            class="btn btn-outline-primary rounded-pill">
-
-                            View Profile
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="text-center mt-5">
-
-            <a href="faculty.html"
-                class="btn btn-primary btn-lg rounded-pill px-5">
-
-                <i class="fa-solid fa-users"></i>
-
-                View All Faculty Members
-
             </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =====================================
-        DEPARTMENT GALLERY
-====================================== -->
-
-<section class="gallery-section py-5 bg-light">
-
-    <div class="container">
-
-        <div class="text-center mb-5"
-            data-aos="fade-up">
-
-            <span class="section-tag">
-
-                PHOTO GALLERY
-
-            </span>
-
-            <h2 class="section-title mt-3">
-
-                Department Gallery
-
-            </h2>
-
-            <p class="text-muted">
-
-                Moments from academic programmes,
-                seminars and departmental activities.
-
-            </p>
-
-        </div>
-
-        <div class="row g-4">
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="gallery-item">
-
-                    <img src="assets/images/2020-21 Season Farewell Image.jpg"
-                        class="img-fluid rounded-4"
-                        alt="Gallery">
-
-                    <div class="gallery-overlay">
-
-                        <i class="fa-solid fa-expand"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="gallery-item">
-
-                    <img src="assets/images/Dep of Math RGC Season 2020-21 to 2025-26.jpg"
-                        class="img-fluid rounded-4"
-                        alt="Gallery">
-
-                    <div class="gallery-overlay">
-
-                        <i class="fa-solid fa-expand"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="gallery-item">
-
-                    <img src="assets/images/Freshers Reception & Farewell 2026.jpg"
-                        class="img-fluid rounded-4"
-                        alt="Gallery">
-
-                    <div class="gallery-overlay">
-
-                        <i class="fa-solid fa-expand"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="gallery-item">
-
-                    <img src="assets/images/new-building-4.jpg"
-                        class="img-fluid rounded-4"
-                        alt="Gallery">
-
-                    <div class="gallery-overlay">
-
-                        <i class="fa-solid fa-expand"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="gallery-item">
-
-                    <img src="assets/images/math-classroom.jpg"
-                        class="img-fluid rounded-4"
-                        alt="Gallery">
-
-                    <div class="gallery-overlay">
-
-                        <i class="fa-solid fa-expand"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="gallery-item">
-
-                    <img src="assets/images/college-building-1-2.jpg"
-                        class="img-fluid rounded-4"
-                        alt="Gallery">
-
-                    <div class="gallery-overlay">
-
-                        <i class="fa-solid fa-expand"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="text-center mt-5">
-
-            <a href="gallery.html"
-                class="btn btn-outline-primary btn-lg rounded-pill px-5">
-
-                <i class="fa-solid fa-images"></i>
-
-                View Full Gallery
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- =====================================
-        STUDENT TESTIMONIALS
-====================================== -->
-
-<section class="testimonial-section py-5">
-
-    <div class="container">
-
-        <div class="text-center mb-5"
-            data-aos="fade-up">
-
-            <span class="section-tag">
-
-                TESTIMONIALS
-
-            </span>
-
-            <h2 class="section-title mt-3">
-
-                What Our Students Say
-
-            </h2>
-
-            <p class="text-muted">
-
-                Experiences shared by students of the
-                Department of Mathematics.
-
-            </p>
-
-        </div>
-
-        <div id="testimonialCarousel"
-            class="carousel slide"
-            data-bs-ride="carousel">
-
-            <div class="carousel-inner">
-
-                <!-- Testimonial 1 -->
-
-                <div class="carousel-item active">
-
-                    <div class="testimonial-card">
-
-                        <i class="fa-solid fa-quote-left quote-icon"></i>
-
-                        <p>
-
-                            The Department of Mathematics
-                            has provided me with excellent
-                            academic guidance and a friendly
-                            learning environment. The teachers
-                            are always supportive and inspiring.
-
-                        </p>
-
-                        <img src="assets/images/alumni/badhon-chandra-roy.jpeg"
-                            alt="Student">
-
-                        <h5>
-
-                           Badhon Chandra Roy
-
-                        </h5>
-
-                        <span>
-
-                            Honours 4th Year
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-                <!-- Testimonial 2 -->
-
-                <div class="carousel-item">
-
-                    <div class="testimonial-card">
-
-                        <i class="fa-solid fa-quote-left quote-icon"></i>
-
-                        <p>
-
-                            Our department encourages
-                            logical thinking, research
-                            and innovation. I am proud
-                            to be a student here.
-
-                        </p>
-
-                        <img src="assets/images/alumni/mehidi-nayem.jpeg"
-                            alt="Student">
-
-                        <h5>
-
-                             Mehidi Nayem
-
-                        </h5>
-
-                        <span>
-
-                            Honours 4th Year
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-                <!-- Testimonial 3 -->
-
-                <div class="carousel-item">
-
-                    <div class="testimonial-card">
-
-                        <i class="fa-solid fa-quote-left quote-icon"></i>
-
-                        <p>
-
-                            Mathematics has become
-                            more enjoyable because
-                            of the friendly teachers
-                            and excellent academic
-                            atmosphere.
-
-                        </p>
-
-                       <img src="assets/images/alumni/mahatab-hossain-meraj.jpeg"
-                            alt="Student">
-
-                        <h5>
-
-                            Mahatab Hossain Meraj
-
-                        </h5>
-
-                        <span>
-
-                            Honours 4th Year
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <button class="carousel-control-prev"
-                type="button"
-                data-bs-target="#testimonialCarousel"
-                data-bs-slide="prev">
-
-                <span class="carousel-control-prev-icon"></span>
-
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
             </button>
-
-            <button class="carousel-control-next"
-                type="button"
-                data-bs-target="#testimonialCarousel"
-                data-bs-slide="next">
-
-                <span class="carousel-control-next-icon"></span>
-
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =====================================
-            CALL TO ACTION
-====================================== -->
-
-<section class="home-cta">
-
-    <div class="container">
-
-        <div class="row align-items-center">
-
-            <div class="col-lg-8">
-
-                <h2>
-
-                    Join the Department of Mathematics
-
-                </h2>
-
-                <p>
-
-                    Explore our academic programmes,
-                    experienced faculty members,
-                    research opportunities and
-                    vibrant learning environment.
-
-                </p>
-
-            </div>
-
-            <div class="col-lg-4 text-lg-end">
-
-                <a href="contact.html"
-                    class="btn btn-warning btn-lg rounded-pill px-4 me-2">
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                    Contact
-
-                </a>
-
-                <a href="about.html"
-                    class="btn btn-outline-light btn-lg rounded-pill px-4">
-
-                    Learn More
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- =====================================
-            MEGA FOOTER
-====================================== -->
-
-<footer class="footer">
-
-    <div class="container">
-
-        <div class="row gy-5">
-
-            <!-- Department -->
-
-            <div class="col-lg-4">
-
-                <img src="assets/icons/RGC Dep of Math logo.png"
-                    width="80"
-                    class="mb-3"
-                    alt="Department Logo">
-
-                <h4>
-
-                    Department of Mathematics
-
-                </h4>
-
-                <p>
-
-                    Rangpur Government College
-                    <br>
-
-                    Rangpur-5400
-                    Bangladesh
-
-                </p>
-
-                <p>
-
-                    Dedicated to excellence in
-                    teaching, learning and
-                    research.
-
-                </p>
-
-            </div>
-
-            <!-- Quick Links -->
-
-            <div class="col-lg-2">
-
-                <h5>
-
-                    Quick Links
-
-                </h5>
-
-                <ul class="footer-links">
-
-                    <li><a href="index.html">Home</a></li>
-
-                    <li><a href="about.html">About</a></li>
-
-                    <li><a href="faculty.html">Faculty</a></li>
-
-                    <li><a href="resources.html">Resources</a></li>
-                    
-                    <li><a href="contact.html">Contact</a></li>
-
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faculty.html">Faculty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-
             </div>
+        </div>
+    </nav>
 
-            <!-- Contact -->
-
-            <div class="col-lg-3">
-
-                <h5>
-
-                    Contact
-
-                </h5>
-
-                <p>
-
-                    <i class="fa-solid fa-envelope me-2"></i>
-
-                    rgc.mathematics@gmail.com
-
-                </p>
-
-                <p>
-
-                    <i class="fa-solid fa-phone me-2"></i>
-
-                    +8801712444826
-
-                </p>
-
-                <p>
-
-                    <i class="fa-solid fa-location-dot me-2"></i>
-
-                    Rangpur Government College,
-                    Rangpur
-
-                </p>
-
-            </div>
-
-            <!-- Social -->
-
-            <div class="col-lg-3">
-
-                <h5>
-
-                    Follow Us
-
-                </h5>
-
-                <div class="social-links">
-
-                    <a href="https://www.facebook.com/rangpurgovtcollege/"
-                        target="_blank">
-
-                        <i class="fab fa-facebook-f"></i>
-
-                    </a>
-
-                    <a href="https://rangpur.college.gov.bd/"
-                        target="_blank">
-
-                        <i class="fa-solid fa-globe"></i>
-
-                    </a>
-
-                    <a href="https://en.wikipedia.org/wiki/Rangpur_Government_College"
-                        target="_blank">
-
-                        <i class="fab fa-wikipedia-w"></i>
-
-                    </a>
-
+    <!-- ============================================
+    HERO SECTION
+    ============================================ -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-7 text-white" data-aos="fade-right">
+                    <span class="hero-badge"><i class="fa-solid fa-graduation-cap"></i> Welcome to</span>
+                    <h1 class="hero-title mt-4">
+                        Department of Mathematics
+                        <span>Rangpur Government College</span>
+                    </h1>
+                    <p class="hero-text mt-4">
+                        The Department of Mathematics is committed to excellence in teaching, research and
+                        academic innovation. We inspire students through logical thinking, analytical skills,
+                        creativity and modern mathematical education.
+                    </p>
+                    <div class="hero-buttons mt-5">
+                        <a href="about.html" class="btn btn-warning btn-lg rounded-pill px-4 me-3">
+                            <i class="fa-solid fa-circle-info"></i> About Department
+                        </a>
+                        <a href="faculty.html" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                            <i class="fa-solid fa-users"></i> Faculty Members
+                        </a>
+                    </div>
                 </div>
-
+                <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
+                    <div class="hero-card">
+                        <img src="assets/icons/RGC Dep of Math logo.png" class="hero-logo" alt="Logo" />
+                        <h3>Department of Mathematics</h3>
+                        <p>Rangpur Government College</p>
+                        <hr />
+                        <div class="hero-info">
+                            <div><i class="fa-solid fa-location-dot"></i> Rangpur, Bangladesh</div>
+                            <div><i class="fa-solid fa-envelope"></i> rgc.mathematics@gmail.com</div>
+                            <div><i class="fa-solid fa-phone"></i> +8801712444826</div>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary w-100 rounded-pill mt-4">Contact Department</a>
+                    </div>
+                </div>
             </div>
-
         </div>
-
-        <hr>
-
-        <div class="row">
-
-            <div class="col-md-6">
-
-                <p class="mb-0">
-
-                    © 2026 Department of Mathematics,
-                    Rangpur Government College.
-
-                </p>
-
-            </div>
-
-            <div class="col-md-6 text-md-end">
-
-                <p class="mb-0">
-
-                    Designed & Developed for the
-                    Department of Mathematics.
-
-                </p>
-
-            </div>
-
+        <div class="scroll-down">
+            <a href="#about-department"><i class="fa-solid fa-angles-down"></i></a>
         </div>
+    </section>
 
-    </div>
+    <!-- ============================================
+    STATISTICS
+    ============================================ -->
+    <section class="hero-stats">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-box" data-aos="zoom-in">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <h2 class="counter" data-target="350">0</h2>
+                        <p>Students</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <h2 class="counter" data-target="6">0</h2>
+                        <p>Faculty Members</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fa-solid fa-book-open"></i>
+                        <h2 class="counter" data-target="25">0</h2>
+                        <p>Academic Courses</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
+                        <i class="fa-solid fa-award"></i>
+                        <h2 class="counter" data-target="100">0</h2>
+                        <p>Excellence Rate %</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</footer>
+    <!-- ============================================
+    ABOUT DEPARTMENT
+    ============================================ -->
+    <section class="about-section py-5" id="about-department">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-12" data-aos="fade-up">
+                    <span class="section-tag">ABOUT US</span>
+                    <h2 class="section-title mt-3">Department of Mathematics</h2>
+                    <p class="lead text-muted">Rangpur Government College</p>
+                    <p>
+                        The Department of Mathematics of Rangpur Government College is one of the leading
+                        academic departments under the National University of Bangladesh.
+                    </p>
+                    <p>
+                        The department provides quality education through experienced faculty members, modern
+                        teaching methods and academic activities that encourage analytical thinking, logical
+                        reasoning and research.
+                    </p>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Quality Education</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Experienced Teachers</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Research Activities</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Modern Learning</div>
+                        </div>
+                    </div>
+                    <div class="row mt-5 g-4">
+                        <div class="col-md-6">
+                            <div class="vision-card">
+                                <div class="icon"><i class="fa-solid fa-eye"></i></div>
+                                <h5>Our Vision</h5>
+                                <p>To become a centre of excellence in mathematics education, innovation and research.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mission-card">
+                                <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+                                <h5>Our Mission</h5>
+                                <p>To produce skilled, creative and responsible graduates through quality teaching and research.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary btn-lg rounded-pill mt-5 px-4">
+                        <i class="fa-solid fa-arrow-right"></i> Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- =====================================
-            BACK TO TOP
-====================================== -->
+    <!-- ============================================
+    WHY CHOOSE US
+    ============================================ -->
+    <section class="why-us py-5 bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">WHY CHOOSE US</span>
+                <h2 class="section-title mt-3">Why Study Mathematics Here?</h2>
+                <p class="text-muted">We are committed to providing an inspiring academic environment.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="why-card" data-aos="fade-up">
+                        <div class="icon"><i class="fa-solid fa-book-open"></i></div>
+                        <h4>Quality Education</h4>
+                        <p>Modern curriculum with strong theoretical and practical knowledge.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="fa-solid fa-user-group"></i></div>
+                        <h4>Skilled Faculty</h4>
+                        <p>Dedicated teachers with excellent academic and research experience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class="fa-solid fa-award"></i></div>
+                        <h4>Academic Excellence</h4>
+                        <p>Preparing students for higher studies, research and professional careers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<button id="topBtn"
-    class="btn btn-primary rounded-circle">
+    <!-- ============================================
+    MESSAGE FROM HEAD
+    ============================================ -->
+    <section class="head-message py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">HEAD'S MESSAGE</span>
+                <h2 class="section-title mt-3">Message from the Department Head</h2>
+                <p class="text-muted">Welcome to the Department of Mathematics, Rangpur Government College.</p>
+            </div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="head-image text-center">
+                        <img src="assets/images/faculty/masuma-akhter.jpg" class="img-fluid rounded-4 shadow-lg" alt="Head" />
+                        <div class="head-social mt-4">
+                            <a href="https://www.facebook.com/masuma.akhter.469965" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="mailto:masumakhter2016@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="tel:+8801712444826"><i class="fa-solid fa-phone"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="head-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <h3>Welcome to Our Department</h3>
+                        <p>
+                            Mathematics is not merely a subject; it is the foundation of scientific thinking,
+                            innovation and technological advancement. Our department is dedicated to providing
+                            quality education through experienced faculty members, modern teaching methods and
+                            a friendly academic environment.
+                        </p>
+                        <p>
+                            We encourage our students to develop logical reasoning, critical thinking,
+                            creativity and research skills so that they become capable of contributing
+                            meaningfully to society and the nation.
+                        </p>
+                        <p>
+                            I warmly invite all students, guardians and visitors to explore our department
+                            and become a part of our academic journey.
+                        </p>
+                        <div class="signature mt-4">
+                            <h5 class="mb-1">Masuma Akhter</h5>
+                            <span>Head of the Department</span>
+                            <p class="mb-0">Department of Mathematics</p>
+                            <small>Rangpur Government College, Rangpur</small>
+                        </div>
+                        <div class="mt-4">
+                            <a href="faculty.html" class="btn btn-primary rounded-pill px-4 me-3">
+                                <i class="fa-solid fa-users"></i> Faculty Members
+                            </a>
+                            <a href="contact.html" class="btn btn-outline-primary rounded-pill px-4">
+                                <i class="fa-solid fa-envelope"></i> Contact
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <i class="fa-solid fa-arrow-up"></i>
+    <!-- ============================================
+    ACHIEVEMENTS
+    ============================================ -->
+    <section class="achievement-section py-5 bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">ACHIEVEMENTS</span>
+                <h2 class="section-title mt-3">Department Highlights</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="achievement-card" data-aos="fade-up">
+                        <i class="fa-solid fa-medal"></i>
+                        <h3>16+</h3>
+                        <p>Years of Academic Heritage</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <h3>350+</h3>
+                        <p>Current Students</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <h3>06</h3>
+                        <p>Faculty Members</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fa-solid fa-award"></i>
+                        <h3>100%</h3>
+                        <p>Commitment to Excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</button>
+    <!-- ============================================
+    NOTICE & EVENTS
+    ============================================ -->
+    <section class="notice-event-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">LATEST UPDATE</span>
+                <h2 class="section-title mt-3">Latest Notices & Upcoming Events</h2>
+                <p class="text-muted">Stay updated with the latest academic notices, seminars and department activities.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <div class="notice-wrapper">
+                        <div class="notice-card" data-aos="fade-up">
+                            <div class="notice-date"><h5>Admission</h5></div>
+                            <div class="notice-content">
+                                <p>National University admission information and circular.</p>
+                                <a href="https://www.nu.ac.bd/admissions/" target="_blank">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="notice-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="notice-date"><h5>University</h5></div>
+                            <div class="notice-content">
+                                <p>View the latest University news and notice.</p>
+                                <a href="https://www.nu.ac.bd/recent-news-notice.php" target="_blank">View Details <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="notice-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="notice-date"><h5>College</h5></div>
+                            <div class="notice-content">
+                                <p>Regular College announcements and student notices.</p>
+                                <a href="https://rangpur.college.gov.bd/pages/notices" target="_blank">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="event-box" data-aos="fade-left">
+                        <h3>Upcoming Events</h3>
+                        <hr />
+                        <div class="event-item">
+                            <div class="event-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                            <div><h6>Freshers' Reception</h6><small>College Auditorium</small></div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-icon"><i class="fa-solid fa-users"></i></div>
+                            <div><h6>Farewell Programme</h6><small>Final Year Students</small></div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-icon"><i class="fa-solid fa-book-open"></i></div>
+                            <div><h6>Mathematics Seminar</h6><small>Academic Discussion</small></div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-icon"><i class="fa-solid fa-trophy"></i></div>
+                            <div><h6>Annual Quiz Competition</h6><small>Department Competition</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- =====================================
-            JAVASCRIPT
-====================================== -->
+    <!-- ============================================
+    QUICK LINKS
+    ============================================ -->
+    <section class="quick-links py-5 bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-tag">QUICK ACCESS</span>
+                <h2 class="section-title mt-3">Useful Academic Links</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <a href="about.html" class="quick-card" data-aos="fade-up">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <h5>About Department</h5>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="faculty.html" class="quick-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-users"></i>
+                        <h5>Faculty Members</h5>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="resources.html" class="quick-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-book"></i>
+                        <h5>Resources</h5>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="contact.html" class="quick-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h5>Contact Us</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Bootstrap -->
+    <!-- ============================================
+    FACULTY PREVIEW
+    ============================================ -->
+    <section class="faculty-preview py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">OUR FACULTY</span>
+                <h2 class="section-title mt-3">Meet Our Faculty Members</h2>
+                <p class="text-muted">Dedicated teachers committed to quality education, research and student success.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="faculty-card" data-aos="fade-up">
+                        <img src="assets/images/faculty/masuma-akhter.jpg" class="img-fluid" alt="Head" />
+                        <div class="faculty-content">
+                            <h4>Head of the Department</h4>
+                            <span>Department of Mathematics</span>
+                            <p>Academic leadership and teaching.</p>
+                            <a href="faculty.html" class="btn btn-outline-primary rounded-pill">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="faculty-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="assets/images/faculty/faizar-rahman.jpg" class="img-fluid" alt="Faculty" />
+                        <div class="faculty-content">
+                            <h4>Faculty Member</h4>
+                            <span>Associate Professor</span>
+                            <p>Passionate about mathematics education.</p>
+                            <a href="faculty.html" class="btn btn-outline-primary rounded-pill">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="faculty-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets/images/faculty/hazzazul-alam.jpg" class="img-fluid" alt="Faculty" />
+                        <div class="faculty-content">
+                            <h4>Faculty Member</h4>
+                            <span>Assistant Professor</span>
+                            <p>Teaching undergraduate mathematics courses.</p>
+                            <a href="faculty.html" class="btn btn-outline-primary rounded-pill">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="faculty.html" class="btn btn-primary btn-lg rounded-pill px-5">
+                    <i class="fa-solid fa-users"></i> View All Faculty Members
+                </a>
+            </div>
+        </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ============================================
+    GALLERY
+    ============================================ -->
+    <section class="gallery-section py-5 bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">PHOTO GALLERY</span>
+                <h2 class="section-title mt-3">Department Gallery</h2>
+                <p class="text-muted">Moments from academic programmes, seminars and departmental activities.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item" data-aos="fade-up">
+                        <img src="assets/images/2020-21 Season Farewell Image.jpg" class="img-fluid rounded-4" alt="Gallery" />
+                        <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="assets/images/Dep of Math RGC Season 2020-21 to 2025-26.jpg" class="img-fluid rounded-4" alt="Gallery" />
+                        <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets/images/Freshers Reception & Farewell 2026.jpg" class="img-fluid rounded-4" alt="Gallery" />
+                        <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item" data-aos="fade-up">
+                        <img src="assets/images/new-building-4.jpg" class="img-fluid rounded-4" alt="Gallery" />
+                        <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="assets/images/math-classroom.jpg" class="img-fluid rounded-4" alt="Gallery" />
+                        <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets/images/college-building-1-2.jpg" class="img-fluid rounded-4" alt="Gallery" />
+                        <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="gallery.html" class="btn btn-outline-primary btn-lg rounded-pill px-5">
+                    <i class="fa-solid fa-images"></i> View Full Gallery
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- AOS -->
+    <!-- ============================================
+    TESTIMONIALS
+    ============================================ -->
+    <section class="testimonial-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">TESTIMONIALS</span>
+                <h2 class="section-title mt-3">What Our Students Say</h2>
+                <p class="text-muted">Experiences shared by students of the Department of Mathematics.</p>
+            </div>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-card">
+                            <i class="fa-solid fa-quote-left quote-icon"></i>
+                            <p>The Department of Mathematics has provided me with excellent academic guidance and a friendly learning environment. The teachers are always supportive and inspiring.</p>
+                            <img src="assets/images/alumni/badhon-chandra-roy.jpeg" alt="Student" />
+                            <h5>Badhon Chandra Roy</h5>
+                            <span>Honours 4th Year</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <i class="fa-solid fa-quote-left quote-icon"></i>
+                            <p>Our department encourages logical thinking, research and innovation. I am proud to be a student here.</p>
+                            <img src="assets/images/alumni/mehidi-nayem.jpeg" alt="Student" />
+                            <h5>Mehidi Nayem</h5>
+                            <span>Honours 4th Year</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <i class="fa-solid fa-quote-left quote-icon"></i>
+                            <p>Mathematics has become more enjoyable because of the friendly teachers and excellent academic atmosphere.</p>
+                            <img src="assets/images/alumni/mahatab-hossain-meraj.jpeg" alt="Student" />
+                            <h5>Mahatab Hossain Meraj</h5>
+                            <span>Honours 4th Year</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- ============================================
+    CALL TO ACTION
+    ============================================ -->
+    <section class="home-cta">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2>Join the Department of Mathematics</h2>
+                    <p>Explore our academic programmes, experienced faculty members, research opportunities and vibrant learning environment.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="contact.html" class="btn btn-warning btn-lg rounded-pill px-4 me-2">
+                        <i class="fa-solid fa-envelope"></i> Contact
+                    </a>
+                    <a href="about.html" class="btn btn-outline-light btn-lg rounded-pill px-4">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
+    <!-- ============================================
+    FOOTER
+    ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4">
+                    <img src="assets/icons/RGC Dep of Math logo.png" width="80" class="mb-3" alt="Logo" />
+                    <h4>Department of Mathematics</h4>
+                    <p>Rangpur Government College<br />Rangpur-5400, Bangladesh</p>
+                    <p>Dedicated to excellence in teaching, learning and research.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact</h5>
+                    <p><i class="fa-solid fa-envelope me-2"></i> rgc.mathematics@gmail.com</p>
+                    <p><i class="fa-solid fa-phone me-2"></i> +8801712444826</p>
+                    <p><i class="fa-solid fa-location-dot me-2"></i> Rangpur Government College, Rangpur</p>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/rangpurgovtcollege/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://rangpur.college.gov.bd/" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Rangpur_Government_College" target="_blank"><i class="fab fa-wikipedia-w"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2026 Department of Mathematics, Rangpur Government College. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Designed &amp; Developed for the Department of Mathematics.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-AOS.init({
+    <!-- ============================================
+    BACK TO TOP
+    ============================================ -->
+    <button id="topBtn" class="btn btn-primary rounded-circle">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-    duration:900,
+    <!-- ============================================
+    SCRIPTS
+    ============================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // AOS Init
+        AOS.init({ duration: 900, once: true });
 
-    once:true
+        // Back to Top
+        const topBtn = document.getElementById('topBtn');
+        window.addEventListener('scroll', () => {
+            topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+        topBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
-});
-
-// Back To Top
-
-const topBtn=document.getElementById("topBtn");
-
-window.addEventListener("scroll",()=>{
-
-    topBtn.style.display=
-    window.scrollY>300
-    ? "block"
-    : "none";
-
-});
-
-topBtn.onclick=()=>{
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-};
-
-// Counter Animation
-
-const counters=document.querySelectorAll(".counter");
-
-const speed=80;
-
-counters.forEach(counter=>{
-
-    const animate=()=>{
-
-        const value=+counter.getAttribute("data-target");
-
-        const data=+counter.innerText;
-
-        const time=value/speed;
-
-        if(data<value){
-
-            counter.innerText=Math.ceil(data+time);
-
-            setTimeout(animate,20);
-
-        }
-
-        else{
-
-            counter.innerText=value;
-
-        }
-
-    };
-
-    animate();
-
-});
-
-</script>
-
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 80;
+        counters.forEach(counter => {
+            const animate = () => {
+                const target = +counter.getAttribute('data-target');
+                const current = +counter.innerText;
+                const increment = target / speed;
+                if (current < target) {
+                    counter.innerText = Math.ceil(current + increment);
+                    setTimeout(animate, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            animate();
+        });
+    </script>
 </body>
-
 </html>
